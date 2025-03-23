@@ -1,0 +1,54 @@
+{
+  "id": "wng-system-translation-pl",
+  "title": "Translation: Wrath & Glory - System - Tłumaczenie PL",
+  "description": "This module implements the Polish translation of the system created by Man Moon to play Warhammer 40k: Wrath & Glory.",
+  "authors": [
+    {
+      "name": "rklos",
+      "discord": "_orkin",
+      "url": "https://github.com/rklos",
+      "flags": {}
+    }
+  ],
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "11",
+    "verified": "12"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "wrath-and-glory",
+        "type": "system",
+        "compatibility": {
+          "minimum": "6.0.6",
+          "verified": "6.0.6"
+        }
+      }
+    ],
+    "requires": [
+      {
+        "id": "babele",
+        "type": "module"
+      },
+      {
+        "id": "PolishCore",
+        "type": "module"
+      }
+    ]
+  },
+  "coreTranslation": true,
+  "languages": [
+    {
+      "lang": "pl",
+      "name": "Polski",
+      "path": "lang/pl.json",
+      "flags": {}
+    }
+  ],
+  "license": "LICENSE",
+  "readme": "README.md",
+  "url": "https://github.com/rklos/wng-system-translation-pl",
+  "manifest": "https://github.com/rklos/wng-system-translation-pl/releases/download/1.0.0/module.json",
+  "download": "https://github.com/rklos/wng-system-translation-pl/releases/download/1.0.0/wng-system-translation-pl.zip"
+}
