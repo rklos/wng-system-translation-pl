@@ -15,7 +15,7 @@ Tłumaczenie to dotyczy tylko samego systemu, a nie zawartości kompendium.
 
 Efekt będzie zatem widoczny głównie w ogólnych terminach używanych w kartach postaci (Agenci, NPC i Pojazdy), a także w wynikach rzutów kośćmi w oknie czatu.
 
-Uwaga: Niektóre terminy nadal będą wyświetlane w języku angielskim w czacie, ponieważ nie zostały udostępnione do tłumaczenia.
+Uwaga: Niektóre terminy nadal będą wyświetlane w języku angielskim, ponieważ nie zostały jeszcze udostępnione do tłumaczenia.
 
 ## Instalacja
 Przez menu Modułów w panelu administracyjnym Foundry:
