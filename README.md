@@ -26,7 +26,7 @@ Po uruchomieniu świata gry:
 - w ustawieniach gry:
   - Domyślny język (zakładka Core -> "Language Preference"): wybierz Polski
 - zarządzanie modułami
-  - wybierz "Translation: Wrath & Glory - System - Tłumaczenie PL" i zapisz.
+  - wybierz "Wrath & Glory - System - Tłumaczenie PL" i zapisz.
 
 ## Zależności
 - Oficjalny system W&G dla Foundry VTT stworzony przez Man Moon: https://foundryvtt.com/packages/wrath-and-glory/
