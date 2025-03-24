@@ -458,10 +458,13 @@
   "ERROR.MacroItemMissing": "Twój kontrolowany aktor nie ma przedmiotu o nazwie",
   "ROLL.CannotFindTable": "Nie można znaleźć tabeli. Zaimportuj ją z kompendium lub utwórz własną tabelę. Musi mieć nazwę {name}",
   "ERROR.NoAvailableActors": "Brak dostępnych aktorów do wyboru!",
-  "TABLE.COMBAT_COMPLICATIONS": "Komplikacje bojowe",
-  "TABLE.PERILS_OF_THE_WARP": "Niebezpieczeństwa Osnowy",
-  "TABLE.COMPLICATION_CONSEQUENCES": "Konsekwencje komplikacji",
-  "TABLE.CRITICAL_HIT_TABLE": "Tabela trafień krytycznych",
+
+  "// it should be in english because scripts are going to use it for table names": "",
+  "TABLE.COMBAT_COMPLICATIONS" : "Combat Complications",
+  "TABLE.PERILS_OF_THE_WARP" : "Perils of the Warp",
+  "TABLE.COMPLICATION_CONSEQUENCES" : "Complication Consequences",
+  "TABLE.CRITICAL_HIT_TABLE" : "Critical Hit Table",
+
   "AUTOCALC.DEFENCE": "Automatyczne obliczanie Obrony",
   "AUTOCALC.RESILIENCE": "Automatyczne obliczanie Wytrzymałości",
   "AUTOCALC.SHOCK": "Automatyczne obliczanie maksymalnego Szoku",
