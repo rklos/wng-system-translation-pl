@@ -1,7 +1,7 @@
 # [PL] FoundryVTT - Nieoficjalne Tłumaczenie systemu Wrath & Glory
 
 ## Opis Modułu
-Ten moduł tłumaczy na język polski kluczowe terminy zawarte w systemie stworzonym przez [Man Moon](https://github.com/moo-man) do obsługi gry [Warhammer 40k: Wrath & Glory](https://cubicle7games.com/warhammer-40k-wrath-and-glory-rpgs) na platformie [Foundry VTT](https://foundryvtt.com/) i wykorzystuje jako podstawę tłumaczenie wykonane przez [alemanym](https://github.com/alemanym/wng-system-translation-fr) oraz [Blayth](https://github.com/Blayth/wng-system-translation-it).
+Ten moduł tłumaczy na język polski kluczowe terminy zawarte w systemie stworzonym przez [Man Moon](https://github.com/moo-man) do obsługi gry [Warhammer 40k: Wrath & Glory](https://cubicle7games.com/warhammer-40k-wrath-and-glory-rpgs) na platformie [Foundry VTT](https://foundryvtt.com/) i bazuje na projekcie tłumaczenia wykonanego przez [alemanym](https://github.com/alemanym/wng-system-translation-fr) oraz [Blayth](https://github.com/Blayth/wng-system-translation-it).
 
 Tłumaczenie to dotyczy tylko samego systemu, a nie zawartości kompendium czy innych płatnych modułów.
 
@@ -27,8 +27,6 @@ Po uruchomieniu świata gry:
 
 ## Zależności
 - Oficjalny system W&G dla Foundry VTT stworzony przez Man Moon: https://foundryvtt.com/packages/wrath-and-glory/
-- Oryginalne tłumaczenie na włoski stworzone przez Blayth: https://github.com/Blayth/wng-system-translation-it
-- Oryginalne tłumaczenie na francuski stworzone przez alemanym: https://github.com/alemanym/wng-system-translation-fr
 
 ## DISCLAIMER/LICENCE
 This module depends on the [Warhammer 40k: Wrath & Glory](https://foundryvtt.com/packages/wrath-and-glory/) system from [Man Moon](https://github.com/moo-man) and require the official C7 'Wrath & Glory - Core Module' module from C7. The present works is under the intellectual property of Cubicle 7 Entertainment Ltd.
