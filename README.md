@@ -26,7 +26,7 @@ Po uruchomieniu świata gry:
   - wybierz "Wrath & Glory - System - Nieoficjalne Tłumaczenie PL" i zapisz.
 
 ## Zależności
-- Oficjalny system W&G dla Foundry VTT stworzony przez Man Moon: https://foundryvtt.com/packages/wrath-and-glory/
+- Oficjalny system W&G dla Foundry VTT stworzony przez Moo-Man: https://foundryvtt.com/packages/wrath-and-glory/
 
 ## DISCLAIMER/LICENCE
 This module depends on the [Warhammer 40k: Wrath & Glory](https://foundryvtt.com/packages/wrath-and-glory/) system from [Moo-Man](https://github.com/moo-man) and require the official C7 'Wrath & Glory - Core Module' module from C7. The present works is under the intellectual property of Cubicle 7 Entertainment Ltd.
