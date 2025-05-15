@@ -38,6 +38,9 @@
     ]
   },
   "coreTranslation": true,
+  "scripts": [
+    "scripts/main.js"
+  ],
   "languages": [
     {
       "lang": "pl",
