@@ -299,7 +299,7 @@
   "POWER.POTENCY_SINGLE": "Pojedynczy",
   "POWER.POTENCY_COST_HELP": "Liczba Zamian, które kosztuje ta Moc",
   "POWER.POTENCY_INITIAL_HELP": "Wartość początkowa przed wzmocnieniem",
-  "POWER.POTENCY_PROPERTY_HELP": "Wzmocniona właściwość",
+  "POWER.POTENCY_PROPERTY_HELP": "<p>Wzmocniona właściwość.</p> Przykłady: <ul><li><p><strong>Obrażenia</strong>: <code>damage.base</code></p></li><li><p><strong>DK</strong>: <code>damage.ed.value</code></p></li><li><p><strong>PP</strong>: <code>damage.ap.value</code></p></li><li><p><strong>Szok</strong>: <code>damage.bonus.shock</code></p></li><li><p><strong>Rany Śmiertelne</strong>: <code>damage.bonus.mortal</code></p></li><li><p><strong>Zasięg</strong>: <code>range</code></p></li><li><p><strong>Czas trwania</strong>: <code>duration</code></p></li>",
   "POWER.POTENCY_VALUE_HELP": "Ile dodać za wzmocnienie",
   "POWER.POTENCY_SINGLE_HELP": "Może być przydzielony tylko raz",
   "RANK.NONE": "Brak",
