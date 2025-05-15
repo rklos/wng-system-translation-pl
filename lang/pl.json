@@ -640,5 +640,9 @@
       "preRollPowerTest": "Przed testem mocy",
       "rollPowerTest": "Test mocy"
     }
-  }
+  },
+
+  "// 'unprepared' localizations": "",
+  "ED Values": "Wartość DK",
+  "Add Dice Value": "Dodaj wartość kości"
 }
