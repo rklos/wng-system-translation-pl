@@ -3,6 +3,7 @@
   "TYPES.Actor.threat": "BG",
   "TYPES.Actor.vehicle": "Pojazd",
   "TYPES.Item.ability": "Zdolność",
+
   "TYPES.Item.ammo": "Amunicja",
   "TYPES.Item.armour": "Pancerz",
   "TYPES.Item.ascension": "Awans",
@@ -19,6 +20,7 @@
   "TYPES.Item.archetype": "Archetyp",
   "TYPES.Item.species": "Gatunek",
   "TYPES.Item.faction": "Frakcja",
+  
   "ABILITY.NAME": "Nazwa",
   "ABILITY.EFFECT": "Efekt",
   "ABILITY.COST": "Koszt",
@@ -28,6 +30,7 @@
   "ABILITY.TYPE": "Typ",
   "ABILITY.DAMAGE": "Obrażenia",
   "ABILITY.TEST_SELF": "Test własny",
+
   "ABILITY_TYPE.BATTLECRY": "Okrzyk bojowy",
   "ABILITY_TYPE.ACTION": "Akcja",
   "ABILITY_TYPE.RUIN": "Zguba",
@@ -36,13 +39,16 @@
   "ABILITY_TYPE.REACTION": "Reakcja",
   "ABILITY_TYPE.DETERMINATION": "Determinacja",
   "ABILITY_TYPE.ANNIHILATION": "Unicestwienie",
+
   "ACTIVATION.FREE": "Darmowy",
   "ACTIVATION.ACTION": "Akcja",
   "ACTIVATION.SIMPLE": "Prosta",
   "ACTIVATION.FULL": "Złożona",
   "ACTIVATION.MOVEMENT": "Ruch",
+
   "ADVANCE.TIER": "Poziom",
   "ADVANCE.RANK": "Ranga",
+
   "AMMO.NAME": "Nazwa",
   "AMMO.DESCRIPTION": "Opis",
   "AMMO.EFFECT": "Efekt",
@@ -50,6 +56,7 @@
   "AMMO.VALUE": "Wartość",
   "AMMO.RARITY": "Rzadkość",
   "AMMO.KEYWORDS": "Słowa-kluczowe",
+
   "ARMOUR.NAME": "Nazwa",
   "ARMOUR.DESCRIPTION": "Opis",
   "ARMOUR.RATING": "Wartość",
@@ -59,6 +66,7 @@
   "ARMOUR.KEYWORDS": "Słowa-kluczowe",
   "ARMOUR.INVULNERABLE": "Niezwyciężony",
   "ARMOUR.QUANTITY": "Ilość",
+
   "ASCENSION.NAME": "Nazwa",
   "ASCENSION.COST": "Koszt",
   "ASCENSION.DESCRIPTION": "Opis",
@@ -66,6 +74,7 @@
   "ASCENSION.KEYWORDS": "Słowa-kluczowe",
   "ASCENSION.INFLUENCE": "Wpływy",
   "ASCENSION.BENEFITS": "Korzyści",
+
   "AUGMETIC.NAME": "Nazwa",
   "AUGMETIC.DESCRIPTION": "Opis",
   "AUGMETIC.EFFECT": "Efekt",
@@ -73,6 +82,7 @@
   "AUGMETIC.RARITY": "Rzadkość",
   "AUGMETIC.KEYWORDS": "Słowa-kluczowe",
   "AUGMETIC.REQUIREMENTS": "Wymagania",
+
   "ARCHETYPE.ATTRIBUTES": "Atrybuty",
   "ARCHETYPE.SKILLS": "Umiejętności",
   "ARCHETYPE.NAME": "Nazwa",
@@ -87,6 +97,7 @@
   "ARCHETYPE.SUGGESTED_SKILLS": "Sugerowane umiejętności",
   "ARCHETYPE.SUGGESTED_TALENTS": "Sugerowane talenty",
   "ARCHETYPE.FACTION": "Frakcja",
+
   "SPECIES.NAME": "Nazwa",
   "SPECIES.COST": "Koszt w PD",
   "SPECIES.SPEED": "Szybkość",
@@ -95,6 +106,7 @@
   "SPECIES.ATTRIBUTE_MAX": "Maksymalne atrybuty",
   "SPECIES.ATTRIBUTES": "Atrybuty",
   "SPECIES.SKILLS": "Umiejętności",
+
   "FACTION.NAME": "Nazwa",
   "FACTION.ORIGIN": "Pochodzenie",
   "FACTION.DESCRIPTION": "Opis",
@@ -102,6 +114,7 @@
   "FACTION.ACCOMPLISHMENT": "Osiągnięcie",
   "FACTION.GOAL": "Cele",
   "FACTION.OBJECTIVES": "Zadania",
+
   "ATTRIBUTE.STRENGTH": "Siła",
   "ATTRIBUTE.TOUGHNESS": "Wytrzymałość",
   "ATTRIBUTE.AGILITY": "Zręczność",
@@ -116,6 +129,7 @@
   "ATTRIBUTE.WILLPOWER_ABREV": "SW",
   "ATTRIBUTE.INTELLECT_ABREV": "Int",
   "ATTRIBUTE.FELLOWSHIP_ABREV": "Ogd",
+
   "BIO.ARCHETYPE": "Archetyp",
   "BIO.FACTION": "Frakcja",
   "BIO.QUOTE": "Motto",
@@ -125,10 +139,12 @@
   "BIO.EYE_COLOUR": "Oczy",
   "BIO.HAIR_COLOUR": "Włosy",
   "BIO.HEIGHT": "Wzrost",
+
   "BIO.ORIGIN": "Pochodzenie",
   "BIO.ACCOMPLISHMENT": "Osiągnięcie",
   "BIO.GOAL": "Cel",
   "BIO.OBJECTIVE": "Zadanie",
+
   "BUTTON.POST_ITEM": "Opublikuj przedmiot",
   "BUTTON.ROLL": "Rzuć kośćmi",
   "BUTTON.REROLL_FAILED": "Przerzut nieudany (-1 Furia/Zguba)",
@@ -145,17 +161,21 @@
   "BUTTON.DAMAGE": "Obrażenia",
   "BUTTON.CONFIGURE": "Konfiguruj",
   "BUTTON.JOURNAL": "Dziennik",
-  "BUTTON.ApplyDamage": "Zastosuj obrażenia",
-  "BUTTON.ApplyDamageInvuln": "Zastosuj obrażenia (Pancerz Niezwyciężony)",
-  "BUTTON.ApplyDamageArmourAP": "Zastosuj obrażenia (PP tylko na Pancerz)",
+
   "SHIFT.DAMAGE": "Obrażenia",
   "SHIFT.GLORY": "Chwała",
   "SHIFT.OTHER": "Inne",
   "SHIFT.POTENCY": "Moc",
+
+  "BUTTON.ApplyDamage": "Zastosuj obrażenia",
+  "BUTTON.ApplyDamageInvuln": "Zastosuj obrażenia (Pancerz Niezwyciężony)",
+  "BUTTON.ApplyDamageArmourAP": "Zastosuj obrażenia (PP tylko na Pancerz)",
+
   "CATEGORY.MELEE": "Walka wręcz",
   "CATEGORY.RANGED": "Dystansowa",
   "CATEGORY.GRENADE_MISSILE": "Granat lub pocisk",
   "CATEGORY.LAUNCHER": "Wyrzutnia",
+
   "CHAT.SUCCESS": "Ikony",
   "CHAT.FAILURE": "Porażki",
   "CHAT.DN": "ST",
@@ -181,6 +201,7 @@
   "CHAT.WOUNDS": "Rany",
   "CHAT.SHOCK": "Szok",
   "CHAT.MORTAL": "Rany Śmiertelne",
+
   "DIALOG.YES": "Tak",
   "DIALOG.NO": "Nie",
   "DIALOG.DN": "ST",
@@ -204,6 +225,7 @@
   "DIALOG.DICE_TOOLTIP": "Liczba kości K6 rzucanych do ustalenia wartości (np. 2 = 2K6)",
   "DIALOG.POWER_LEVEL": "Poziom mocy",
   "DIALOG.IGNORE_SHOCK": "Ignoruj Szok",
+
   "GEAR.NAME": "Nazwa",
   "GEAR.DESCRIPTION": "Opis",
   "GEAR.EFFECT": "Efekt",
@@ -211,6 +233,7 @@
   "GEAR.RARITY": "Rzadkość",
   "GEAR.KEYWORDS": "Słowa-kluczowe",
   "GEAR.QUANTITY": "Ilość",
+
   "HEADER.TALENT": "Talent",
   "HEADER.ABILITY": "Zdolność",
   "HEADER.PSYCHIC_POWER": "Moc Psioniczna",
@@ -262,13 +285,17 @@
   "HEADER.MAN": "Obsł.",
   "HEADER.RARITY": "Rzadkość",
   "HEADER.VALUE": "Wartość",
+
   "KEYWORD.NAME": "Nazwa",
   "KEYWORD.DESCRIPTION": "Opis",
+
   "MEMORABLE_INJURY.NAME": "Nazwa",
   "MEMORABLE_INJURY.DESCRIPTION": "Opis",
+
   "MUTATION.NAME": "Nazwa",
   "MUTATION.DESCRIPTION": "Opis",
   "MUTATION.EFFECT": "Efekt",
+
   "PSYCHIC_POWER.NAME": "Nazwa",
   "PSYCHIC_POWER.EFFECT": "Efekt",
   "PSYCHIC_POWER.COST": "Koszt",
@@ -292,6 +319,7 @@
   "PSYCHIC_POWER.BOUND": "Związana",
   "PSYCHIC_POWER.UNBOUND": "Niezwiązana",
   "PSYCHIC_POWER.TRANSCENDENT": "Transcendentna",
+
   "POWER.POTENCY_COST": "Koszt",
   "POWER.POTENCY_INITIAL": "Początkowy",
   "POWER.POTENCY_PROPERTY": "Właściwość",
@@ -302,16 +330,19 @@
   "POWER.POTENCY_PROPERTY_HELP": "<p>Wzmocniona właściwość.</p> Przykłady: <ul><li><p><strong>Obrażenia</strong>: <code>damage.base</code></p></li><li><p><strong>DK</strong>: <code>damage.ed.value</code></p></li><li><p><strong>PP</strong>: <code>damage.ap.value</code></p></li><li><p><strong>Szok</strong>: <code>damage.bonus.shock</code></p></li><li><p><strong>Rany Śmiertelne</strong>: <code>damage.bonus.mortal</code></p></li><li><p><strong>Zasięg</strong>: <code>range</code></p></li><li><p><strong>Czas trwania</strong>: <code>duration</code></p></li>",
   "POWER.POTENCY_VALUE_HELP": "Ile dodać za wzmocnienie",
   "POWER.POTENCY_SINGLE_HELP": "Może być przydzielony tylko raz",
+
   "RANK.NONE": "Brak",
   "RANK.SINGLE": "+Ranga",
   "RANK.DOUBLE": "+Podwójna Ranga",
   "RANK.MINUS_SINGLE": "-Ranga",
   "RANK.MINUS_DOUBLE": "-Podwójna Ranga",
+
   "RARITY.COMMON": "Powszechny",
   "RARITY.UNCOMMON": "Niecodzienny",
   "RARITY.RARE": "Rzadki",
   "RARITY.VERY_RARE": "Bardzo rzadki",
   "RARITY.UNIQUE": "Unikalny",
+
   "RESOURCE.FAITH": "Wiara",
   "RESOURCE.WRATH": "Furia",
   "RESOURCE.INFLUENCE": "Wpływy",
@@ -319,6 +350,7 @@
   "RESOURCE.EXPERIENCE": "Doświadczenie",
   "RESOURCE.RUIN": "Zguba",
   "RESOURCE.GLORY": "Chwała",
+
   "ROLL.DETERMINATION": "Determinacja",
   "ROLL.CONVICTION": "Upór",
   "ROLL.RESOLVE": "Odwaga",
@@ -332,6 +364,7 @@
   "ROLL.FEAR": "Przestraszony",
   "ROLL.TERROR": "Przerażony",
   "ROLL.STEALTH": "Ukrywanie się",
+
   "EDIT.POOL_DICE": "Kość Puli",
   "EDIT.WRATH_DICE": "Kość Furii",
   "EDIT.ICONS": "Ikony",
@@ -339,12 +372,14 @@
   "EDIT.ED": "DK",
   "EDIT.AP": "PP",
   "EDIT.POTENCY": "Moc",
+
   "SIZE.TINY": "Malutki",
   "SIZE.SMALL": "Mały",
   "SIZE.AVERAGE": "Średni",
   "SIZE.LARGE": "Duży",
   "SIZE.HUGE": "Ogromny",
   "SIZE.GARGANTUAN": "Kolosalny",
+
   "SKILL.DEFAULT": "Domyślny",
   "SKILL.ATHLETICS": "Atletyka",
   "SKILL.AWARENESS": "Czujność",
@@ -364,6 +399,7 @@
   "SKILL.SURVIVAL": "Przetrwanie",
   "SKILL.TECH": "Korzystanie z technologii",
   "SKILL.WEAPON_SKILL": "Walka wręcz",
+
   "TAB.EFFECTS": "EFEKTY",
   "TAB.COMBAT": "WALKA",
   "TAB.GEAR": "WYPOS.",
@@ -374,6 +410,7 @@
   "TAB.DETAILS": "SZCZEGÓŁY",
   "TAB.BONUS": "BONUS",
   "TAB.MAIN": "GŁÓWNE",
+
   "TALENT.NAME": "Nazwa",
   "TALENT.EFFECT": "Efekt",
   "TALENT.COST": "Koszt w PD",
@@ -381,6 +418,7 @@
   "TALENT.REQUIREMENTS": "Wymagania",
   "TALENT.DISPLAY": "Wyświetl",
   "TAB.SETTINGS": "USTAWIENIA",
+
   "TITLE.ATTRIBUTES": "ATRYBUTY",
   "TITLE.KEYWORDS": "SŁOWA-KLUCZOWE",
   "TITLE.PSYCHIC_POWERS": "MOCE PSIONICZNE",
@@ -403,8 +441,10 @@
   "TITLE.COMPLEMENT": "ZAŁOGA",
   "TITLE.MOB_ABILITIES": "ZDOLNOŚCI HORDY",
   "TITLE.INACTIVE_MOB_ABILITIES": "NIEAKTYWNE ZDOLNOŚCI HORDY",
+
   "TRAUMATIC_INJURY.NAME": "Nazwa",
   "TRAUMATIC_INJURY.DESCRIPTION": "Opis",
+
   "WEAPON.NAME": "Nazwa",
   "WEAPON.DESCRIPTION": "Opis",
   "WEAPON.DAMAGE": "Obrażenia",
@@ -428,20 +468,25 @@
   "WEAPON.TWINNED": "Podwójna",
   "WEAPON_UPGRADE.TRAITS_ADD": "Dodane cechy",
   "WEAPON_UPGRADE.TRAITS_REMOVE": "Usunięte cechy",
+
   "RANGE.SHORT": "Krótki",
   "RANGE.MEDIUM": "Średni",
   "RANGE.LONG": "Długi",
+
   "ITEM.EQP": "Wyp.",
   "ITEM.QTY": "Ilość",
+
   "WEAPON_UPGRADE.NAME": "Nazwa",
   "WEAPON_UPGRADE.DESCRIPTION": "Opis",
   "WEAPON_UPGRADE.EFFECT": "Efekt",
   "WEAPON_UPGRADE.VALUE": "Wartość",
   "WEAPON_UPGRADE.RARITY": "Rzadkość",
   "WEAPON_UPGRADE.KEYWORDS": "Słowa-kluczowe",
+
   "CONTROLS.WNGCounterToggle": "Licznik Chwały i Zguby",
   "COUNTER.GLORY_CHANGED": "Chwała zmieniła się na {change}",
   "COUNTER.RUIN_CHANGED": "Zguba zmieniła się na {change}",
+
   "WARN.NoActorsToApply": "Tokeny muszą być wybrane lub postać musi być przypisana, aby zastosować efekt.",
   "WARN.NoActorsToTest": "Tokeny muszą być wybrane lub postać musi być przypisana, aby wykonać test.",
   "ERROR.NoMoreWrath": "Furia wyczerpana",
@@ -477,8 +522,11 @@
   "AUTOCALC.AUTO_EXHAUSTED": "Automatycznie Wycieńczony",
   "CONFIGURE.GenerateMetaCurrencies": "Generuj Meta-Waluty",
   "CONFIGURE.HidePassengers": "Ukryj pasażerów",
+
+
   "VEHICLE.TRAITS": "Cechy",
   "VEHICLE.MAN": "Obsł.",
+
   "CONDITION.Bleeding": "Krwawienie",
   "CONDITION.Blinded": "Oślepienie",
   "CONDITION.Exhausted": "Wycieńczenie",
@@ -495,6 +543,7 @@
   "CONDITION.Vulnerable": "Odsłonięcie",
   "CONDITION.Dying": "Konanie",
   "CONDITION.Dead": "Martwy",
+
   "TRAIT.Agonising": "Raniąca",
   "TRAIT.Arc": "Elektryczna",
   "TRAIT.Assault": "Szturmowa",
@@ -525,6 +574,7 @@
   "TRAIT.PowerField": "Energetyczny",
   "TRAIT.Powered": "Wspomagany",
   "TRAIT.Shield": "Tarcza",
+
   "EFFECT.Wounded": "Ranny",
   "EFFECT.FullDefence": "Pełna obrona",
   "EFFECT.AllOutAttack": "Szaleńczy atak",
@@ -533,6 +583,7 @@
   "THREAT.MOB": "Horda",
   "THREAT.MobAbilities": "Zdolności hordy",
   "THREAT.MobValue": "Wartość hordy",
+
   "UpdaterTitle1": "Aktualizacja",
   "UpdaterTitle2": "Zawartość",
   "Updater1": "Ten proces zaimportuje nowe dokumenty i zastąpi zaimportowane dokumenty ich zawartością z Kompendium.",
@@ -549,10 +600,13 @@
   "UPDATER.Notification": "Dokumenty utworzone {created} i zaktualizowane {updated} z {name} - {version}",
   "UPDATER.DeleteModuleContent": "Usuń zawartość modułu",
   "UPDATER.DeleteModuleContentPrompt": "<p><strong>UWAGA</strong>: Ta operacja usunie całą zawartość związaną z modułem <strong>{id}</strong>, która została zaimportowana do tego świata.</p><p>Czy na pewno chcesz kontynuować?</p>",
+
   "UPDATER.ResolveDuplicates": "Rozwiąż Duplikaty",
   "UPDATER.ResolveDuplicatesNote": "Te Dokumenty już istnieją w świecie; czy zamiast tego chcesz użyć danych z zainicjowanego modułu?<br><br>Pozostawienie zaznaczonego Dokumentu zastosuje nowe dane, w przeciwnym razie nie będzie wprowadzona żadna zmiana.",
+
   "CC.XP_AVAILABLE": "PD Dostępne",
   "CC.XP_SPENT": "PD Wydane",
+
   "BUGREPORT.Contact": "Kontakt",
   "BUGREPORT.ContactPlaceholder": "Tag Discord lub Email.",
   "BUGREPORT.DescriptionPlaceholder": "Co się stało, jak to odtworzyć, itp.",
@@ -572,10 +626,13 @@
     "Trigger": {
       "preTakeDamage": "Przed otrzymaniem obrażeń",
       "preApplyDamage": "Przed zadaniem obrażeń",
+
       "computeDamage": "Oblicz obrażenia",
       "preComputeDamage": "Przed obliczeniem obrażeń",
+
       "takeDamage": "Otrzymaj obrażenia",
       "applyDamage": "Zadaj obrażenia",
+
       "rollTest": "Wykonaj test",
       "preRollTest": "Przed wykonaniem testu",
       "preRollWeaponTest": "Przed testem broni",
