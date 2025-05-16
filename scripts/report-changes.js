@@ -99,14 +99,6 @@ async function processTranslations(shouldApply = false) {
         // Write updated JSON back to file
         fs.writeFileSync(`src/lang/${localFile}.json`, JSON.stringify(localJson, null, 2));
         console.log(`\nUpdated ${localFile}.json with new translations`);
-        
-        // Read the file again to get line numbers
-        const fileContent = fs.readFileSync(`src/lang/${localFile}.json`, 'utf8').split('\n');
-        console.log('\nChanged lines:');
-        missingKeys.forEach(key => {
-          const lineNumber = fileContent.findIndex(line => line.includes(`"${key.split('.').pop()}"`)) + 1;
-          console.log(`Line ${lineNumber}: "${key}"`);
-        });
       } else {
         console.log('\nNo changes to apply');
       }
