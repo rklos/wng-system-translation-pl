@@ -6,7 +6,7 @@ import listTemplates from './.rollup/list-templates.js';
 export default {
   input: 'src/scripts/main.js',
   output: {
-    dir: 'dist',
+    dir: 'dist/scripts',
   },
   plugins: [
     del({ targets: 'dist' }),
