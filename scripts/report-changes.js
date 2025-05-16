@@ -99,7 +99,7 @@ async function processTranslations(shouldApply = false) {
         // Write updated JSON back to file
         fs.writeFileSync(`src/lang/${localFile}.json`, JSON.stringify(localJson, null, 2));
         console.log(`\nUpdated ${localFile}.json with new translations`);
-      } else {
+      } else if (shouldApply) {
         console.log('\nNo changes to apply');
       }
     } catch (error) {
