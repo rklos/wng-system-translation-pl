@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "build": "rollup -c",
-    "postbuild": "node scripts/bundle-jsons.js"
+    "postbuild": "node scripts/bundle-jsons.js",
+    "report": "node scripts/report-changes.js"
   },
   "repository": {
     "type": "git",
