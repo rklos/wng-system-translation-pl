@@ -67,23 +67,7 @@ function reorderSkills() {
 }
 
 function overrideTemplates() {
-  // TODO: If we implement build process, we should load all templates automatically
-  const templatePaths = [
-    'apps/item-traits.hbs',
-
-    'chat/roll/ability/ability-use.hbs',
-    'chat/roll/base/base-buttons.hbs',
-    'chat/roll/base/dice-container.hbs',
-    'chat/roll/common/common-buttons.hbs',
-    'chat/roll/corruption/corruption-buttons.hbs',
-    'chat/roll/damage/damage-roll.hbs',
-    'chat/roll/mutation/mutation-buttons.hbs',
-    'chat/roll/mutation/mutation-roll.hbs',
-    'chat/roll/power/power-buttons.hbs',
-    'chat/roll/weapon/weapon-buttons.hbs',
-
-    'dialog/attack-roll.hbs',
-  ];
+  const templatePaths = __templates__;
 
   templatePaths.forEach(async (path) => {
     const originalPath = `systems/wrath-and-glory/template/${path}`;
