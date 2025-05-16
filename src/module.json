@@ -38,6 +38,10 @@
       {
         "id": "wrath-and-glory",
         "type": "system"
+      },
+      {
+        "id": "warhammer-lib",
+        "type": "module"
       }
     ]
   },
