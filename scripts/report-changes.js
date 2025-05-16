@@ -12,8 +12,17 @@ async function processTranslations(shouldApply = false) {
       const response = await fetch(remoteUrl);
       const remoteJson = await response.json();
       
-      // Read local translated version
-      const localJson = JSON.parse(fs.readFileSync(`src/lang/${localFile}.json`, 'utf8'));
+      // Read local translated version or create empty object if file doesn't exist
+      let localJson;
+      try {
+        localJson = JSON.parse(fs.readFileSync(`src/lang/${localFile}.json`, 'utf8'));
+      } catch (error) {
+        if (error.code === 'ENOENT') {
+          localJson = {};
+        } else {
+          throw error;
+        }
+      }
       
       // Track differences
       const missingKeys = [];
