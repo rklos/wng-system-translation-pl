@@ -12,7 +12,7 @@ export default {
     del({ targets: 'dist' }),
     copy({
       targets: [
-        { src: 'src/module.json', dest: 'dist/module.json' },
+        { src: 'src/module.json', dest: 'dist/' },
         { src: 'src/template/*', dest: 'dist/template' },
       ]
     }),
