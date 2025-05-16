@@ -1,0 +1,23 @@
+{
+  "name": "wng-system-translation-pl",
+  "version": "1.0.4",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "postbuild": "node scripts/bundle-jsons.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rklos/wng-system-translation-pl.git"
+  },
+  "author": "Radosław Kłos <radoslaw@klos.dev>",
+  "bugs": {
+    "url": "https://github.com/rklos/wng-system-translation-pl/issues"
+  },
+  "homepage": "https://github.com/rklos/wng-system-translation-pl#readme",
+  "devDependencies": {
+    "rollup": "4.40.2",
+    "rollup-plugin-copy": "3.5.0",
+    "rollup-plugin-delete": "3.0.1"
+  }
+}

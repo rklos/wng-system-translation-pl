@@ -13,42 +13,53 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+
+      - name: Setup Nodejs
+        uses: actions/setup-node@v3
+        with:
+          node-version: "22"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
         
       - name: Get Module ID
         id: moduleID
         uses: notiz-dev/github-action-json-property@release
         with: 
-          path: 'module.json'
+          path: './dist/module.json'
           prop_path: 'id'
           
       - name: Get tag    
         id: tag
         uses: dawidd6/action-get-tag@v1.1.0
 
-      - name: Set Download Link
+      - name: Set Version
         uses: jossef/action-set-json-field@v2
         with:
-          file: './module.json'
+          file: './dist/module.json'
           field: 'version'
           value: "${{steps.tag.outputs.tag}}"
           
       - name: Set Download Link
         uses: jossef/action-set-json-field@v2
         with:
-          file: './module.json'
+          file: './dist/module.json'
           field: 'download'
           value: "https://github.com/${{github.repository}}/releases/download/${{steps.tag.outputs.tag}}/${{steps.moduleID.outputs.prop}}.zip"
           
       - name: Set Manifest Link
         uses: jossef/action-set-json-field@v2
         with:
-          file: './module.json'
+          file: './dist/module.json'
           field: 'manifest'
           value: "https://github.com/${{github.repository}}/releases/download/${{steps.tag.outputs.tag}}/module.json"
           
       - name: Create ZIP
         working-directory: ./
-        run: zip -r ./${{steps.moduleID.outputs.prop}}.zip ./*
+        run: zip -r ./dist/${{steps.moduleID.outputs.prop}}.zip ./dist/*
 
       - name: Create Release
         uses: ncipollo/release-action@v1.9.0
@@ -60,4 +71,4 @@ jobs:
           prerelease: ${{ github.event.release.prerelease }}
           tag: ${{ github.event.release.tag_name }}
           body: ${{ github.event.release.body }}
-          artifacts: "./module.json, ./${{steps.moduleID.outputs.prop}}.zip"
+          artifacts: "./dist/module.json, ./dist/${{steps.moduleID.outputs.prop}}.zip"

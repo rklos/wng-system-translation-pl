@@ -624,25 +624,21 @@
   
   "WH": {
     "Trigger": {
-      "preTakeDamage": "Przed otrzymaniem obrażeń",
-      "preApplyDamage": "Przed zadaniem obrażeń",
+      "preTakeDamage": "Przed otrzymaniem obrażeń (preTakeDamage)",
+      "preApplyDamage": "Przed zadaniem obrażeń (preApplyDamage)",
 
-      "computeDamage": "Oblicz obrażenia",
-      "preComputeDamage": "Przed obliczeniem obrażeń",
+      "computeDamage": "W trakcie obliczania obrażeń (computeDamage)",
+      "preComputeDamage": "Przed obliczeniem obrażeń (preComputeDamage)",
 
-      "takeDamage": "Otrzymaj obrażenia",
-      "applyDamage": "Zadaj obrażenia",
+      "takeDamage": "W trakcie otrzymywania obrażeń (takeDamage)",
+      "applyDamage": "W trakcie zadawania obrażeń (applyDamage)",
 
-      "rollTest": "Wykonaj test",
-      "preRollTest": "Przed wykonaniem testu",
-      "preRollWeaponTest": "Przed testem broni",
-      "rollWeaponTest": "Test broni",
-      "preRollPowerTest": "Przed testem mocy",
-      "rollPowerTest": "Test mocy"
+      "rollTest": "W trakcie wykonywania testu (rollTest)",
+      "preRollTest": "Przed wykonaniem testu (preRollTest)",
+      "preRollWeaponTest": "Przed testem broni (preRollWeaponTest)",
+      "rollWeaponTest": "W trakcie testu broni (rollWeaponTest)",
+      "preRollPowerTest": "Przed testem mocy (preRollPowerTest)",
+      "rollPowerTest": "W trakcie testu mocy (rollPowerTest)"
     }
-  },
-
-  "// 'unprepared' localizations": "",
-  "ED Values": "Wartość DK",
-  "Add Dice Value": "Dodaj wartość kości"
+  }
 }
