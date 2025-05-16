@@ -41,7 +41,11 @@
       },
       {
         "id": "warhammer-lib",
-        "type": "module"
+        "type": "module",
+        "compatibility": {
+          "minimum": "1.4.1",
+          "verified": "1.7.1"
+        }
       }
     ]
   },
