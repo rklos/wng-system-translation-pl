@@ -15,13 +15,39 @@ async function processTranslations(shouldApply = false) {
       // Read local translated version
       const localJson = JSON.parse(fs.readFileSync(`src/lang/${localFile}.json`, 'utf8'));
       
-      // Get all keys from both files, filtering out comment keys from local
-      const remoteKeys = new Set(Object.keys(remoteJson));
-      const localKeys = new Set(Object.keys(localJson).filter(key => !key.startsWith('//')));
+      // Track differences
+      const missingKeys = [];
+      const extraKeys = [];
       
-      // Find missing and extra keys
-      const missingKeys = [...remoteKeys].filter(key => !localKeys.has(key));
-      const extraKeys = [...localKeys].filter(key => !remoteKeys.has(key));
+      // Function to recursively find differences
+      function findDifferences(localObj, remoteObj, path = '') {
+        for (const key in remoteObj) {
+          const currentPath = path ? `${path}.${key}` : key;
+          
+          if (typeof remoteObj[key] === 'object' && remoteObj[key] !== null) {
+            if (!localObj[key]) {
+              missingKeys.push(currentPath);
+            } else {
+              findDifferences(localObj[key], remoteObj[key], currentPath);
+            }
+          } else if (!localObj[key]) {
+            missingKeys.push(currentPath);
+          }
+        }
+        
+        // Check for extra keys in local
+        for (const key in localObj) {
+          if (key.startsWith('//')) continue;
+          
+          const currentPath = path ? `${path}.${key}` : key;
+          if (!remoteObj[key]) {
+            extraKeys.push(currentPath);
+          }
+        }
+      }
+      
+      // Find all differences
+      findDifferences(localJson, remoteJson);
       
       // Report differences
       console.log(`\n=== ${localFile} ===`);
@@ -41,47 +67,36 @@ async function processTranslations(shouldApply = false) {
       if (shouldApply && missingKeys.length > 0) {
         console.log('\nApplying missing translations:');
         
-        // Create new object maintaining original order
-        const newJson = {};
-        let addedKeys = new Set();
-        
-        // First add all existing local keys in their original order
-        for (const key of Object.keys(localJson)) {
-          newJson[key] = localJson[key];
-          
-          if (key.startsWith('//')) continue;
-          
-          // Find and add any missing keys that should come after this key
-          const nextKey = Object.keys(remoteJson).find(k => 
-            !addedKeys.has(k) && 
-            Object.keys(remoteJson).indexOf(k) > Object.keys(remoteJson).indexOf(key)
-          );
-          
-          if (nextKey && missingKeys.includes(nextKey)) {
-            newJson[nextKey] = remoteJson[nextKey];
-            addedKeys.add(nextKey);
-            console.log(`+ ${nextKey}`);
+        // Function to recursively add missing translations
+        function addMissingTranslations(localObj, remoteObj, path = '') {
+          for (const key in remoteObj) {
+            const currentPath = path ? `${path}.${key}` : key;
+            
+            if (typeof remoteObj[key] === 'object' && remoteObj[key] !== null) {
+              if (!localObj[key]) {
+                localObj[key] = {};
+              }
+              addMissingTranslations(localObj[key], remoteObj[key], currentPath);
+            } else if (!localObj[key]) {
+              localObj[key] = remoteObj[key];
+              console.log(`+ ${currentPath}`);
+            }
           }
         }
         
-        // Add any remaining missing keys at the end
-        for (const key of missingKeys) {
-          if (!addedKeys.has(key)) {
-            newJson[key] = remoteJson[key];
-            console.log(`+ ${key}`);
-          }
-        }
+        // Add missing translations
+        addMissingTranslations(localJson, remoteJson);
         
         // Write updated JSON back to file
-        fs.writeFileSync(`src/lang/${localFile}.json`, JSON.stringify(newJson, null, 2));
+        fs.writeFileSync(`src/lang/${localFile}.json`, JSON.stringify(localJson, null, 2));
         console.log(`\nUpdated ${localFile}.json with new translations`);
         
         // Read the file again to get line numbers
         const fileContent = fs.readFileSync(`src/lang/${localFile}.json`, 'utf8').split('\n');
         console.log('\nChanged lines:');
         missingKeys.forEach(key => {
-          const lineNumber = fileContent.findIndex(line => line.includes(`"${key}"`)) + 1;
-          console.log(`Line ${lineNumber}: "${key}": "${remoteJson[key]}"`);
+          const lineNumber = fileContent.findIndex(line => line.includes(`"${key.split('.').pop()}"`)) + 1;
+          console.log(`Line ${lineNumber}: "${key}"`);
         });
       } else {
         console.log('\nNo changes to apply');
