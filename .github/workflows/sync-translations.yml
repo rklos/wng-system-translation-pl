@@ -23,7 +23,8 @@ jobs:
       - name: Run sync script
         run: npm run sync
 
-      - uses: EndBug/add-and-commit@v9 # You can change this to use a specific version.
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
         with:
           # The arguments for the `git add` command (see the paragraph below for more info)
           # Default: '.'
