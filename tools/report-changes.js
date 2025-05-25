@@ -8,40 +8,36 @@ const repos = {
   'warhammer-library': 'moo-man/WarhammerLibrary-FVTT',
 };
 
-async function checkTemplates(changes, name) {
-  // In the future we will need the name to differentiate between system's and library's templates
-  // but for now we have only system's templates
-
+async function checkTemplates(changes, repoName) {
   const templateChanges = changes.changedFiles
-    .filter((file) => file.filename.endsWith('.hbs'))
-    .filter((file) => TEMPLATES_PATCHES[file.filename.replace('.hbs', '').replace('static/templates/', '')]);
+    .filter(file => file.filename.endsWith('.hbs'))
+    .filter(file => TEMPLATES_PATCHES[file.filename.replace('.hbs', '').replace('static/templates/', '')]);
 
   const obsoletePatches = [];
-  templateChanges.forEach((file) => {
+  for (const file of templateChanges) {
     const patches = TEMPLATES_PATCHES[file.filename.replace('.hbs', '').replace('static/templates/', '')];
     let patchedContent = file.content;
-    Object.entries(patches).forEach(([english, polish]) => {
+    
+    for (const [english, polish] of Object.entries(patches)) {
       const contentBefore = patchedContent;
       patchedContent = patchedContent.replaceAll(english, polish);
       if (patchedContent === contentBefore) {
-        obsoletePatches.push({
-          filename: file.filename,
-          english: english,
-          polish: polish,
-        });
+        obsoletePatches.push({ filename: file.filename, english, polish });
       }
-    });
-  });
+    }
+  }
 
   if (templateChanges.length > 0) {
     console.log(chalk.yellow('\nModified templates:'));
-    templateChanges.forEach(file => {
-      console.log(chalk.yellow(`${file.status === 'modified' ? 'M' : 'D'} ${file.filename}`));
-    });
+    templateChanges.forEach(file => 
+      console.log(chalk.yellow(`${file.status === 'modified' ? 'M' : 'D'} ${file.filename}`))
+    );
 
     if (obsoletePatches.length > 0) {
       console.log(chalk.yellow('\nObsolete patches:'));
-      obsoletePatches.forEach(patch => console.log(chalk.yellow(`- ${patch.filename}: "${patch.english}" -> "${patch.polish}"`)));
+      obsoletePatches.forEach(patch => 
+        console.log(chalk.yellow(`- ${patch.filename}: "${patch.english}" -> "${patch.polish}"`))
+      );
     }
   } else {
     console.log(chalk.green('No template changes found'));
@@ -51,36 +47,29 @@ async function checkTemplates(changes, name) {
 }
 
 async function checkTranslations(changes, name, repo) {
-  const translationChanges = changes.changedFiles.filter(file => {
-    return file.filename.startsWith('lang/') && file.filename.endsWith('.json');
-  });
+  const translationChanges = changes.changedFiles.filter(file => 
+    file.filename.startsWith('lang/') && file.filename.endsWith('.json')
+  );
 
   if (translationChanges.length > 0) {
     console.log(chalk.blue('\nModified translation files:'));
-    translationChanges.forEach(file => {
-      console.log(chalk.yellow(`${file.status === 'modified' ? 'M' : 'D'} ${file.filename}`));
-    });
+    translationChanges.forEach(file => 
+      console.log(chalk.yellow(`${file.status === 'modified' ? 'M' : 'D'} ${file.filename}`))
+    );
   }
 
-  // Always check translations, even if no changes were detected
   const response = await fetch(
     `https://raw.githubusercontent.com/${repo}/refs/tags/${changes.tagName}/static/lang/en.json`
   );
   const remoteJson = await response.json();
   
-  // Read local translation file
-  let localJson;
+  let localJson = {};
   try {
     localJson = JSON.parse(fs.readFileSync(`src/lang/${name}.json`, 'utf8'));
   } catch (error) {
-    if (error.code === 'ENOENT') {
-      localJson = {};
-    } else {
-      throw error;
-    }
+    if (error.code !== 'ENOENT') throw error;
   }
 
-  // Compare translations
   const missingKeys = [];
   const extraKeys = [];
 
@@ -101,11 +90,8 @@ async function checkTranslations(changes, name, repo) {
     
     for (const key in localObj) {
       if (key.startsWith('//')) continue;
-      
       const currentPath = path ? `${path}.${key}` : key;
-      if (!remoteObj[key]) {
-        extraKeys.push(currentPath);
-      }
+      if (!remoteObj[key]) extraKeys.push(currentPath);
     }
   }
 
@@ -128,13 +114,9 @@ async function checkChanges() {
   for (const [name, repo] of Object.entries(repos)) {
     try {
       console.log(chalk.blue(`\n=== Checking ${name} ===`));
-      
-      // Get latest changes
       const changes = await getLatestChanges(repo);
-
       await checkTemplates(changes, name);
       await checkTranslations(changes, name, repo);
-
     } catch (error) {
       console.error(chalk.red(`Error processing ${name}:`), error);
     }
