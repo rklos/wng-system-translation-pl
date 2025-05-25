@@ -32,10 +32,6 @@
         "type": "module"
       },
       {
-        "id": "PolishCore",
-        "type": "module"
-      },
-      {
         "id": "wrath-and-glory",
         "type": "system"
       },
