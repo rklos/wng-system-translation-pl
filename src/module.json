@@ -13,7 +13,8 @@
   "version": "1.1.1",
   "compatibility": {
     "minimum": "11",
-    "verified": "12"
+    "verified": "12",
+    "maximum": "12"
   },
   "relationships": {
     "systems": [
