@@ -116,3 +116,4 @@ jobs:
           method: 'POST'
           customHeaders: '{"Content-Type": "application/json", "Authorization" : "${{ secrets.FOUNDRY_KEY }}"}'
           data: '{"dry_run": false, "id": "${{steps.moduleID.outputs.prop}}", "release": {"version":  "${{steps.tag.outputs.tag}}", "manifest": "https://github.com/${{github.repository}}/releases/download/${{steps.tag.outputs.tag}}/module.json", "notes": "https://github.com/${{github.repository}}/releases/tag/${{steps.tag.outputs.tag}}", "compatibility" : {"minimum": "${{steps.minimum.outputs.prop}}", "verified": "${{steps.verified.outputs.prop}}", "maximum": "${{steps.maximum.outputs.prop}}"}}}'
+          timeout: 20000
