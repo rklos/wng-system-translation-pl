@@ -1,6 +1,7 @@
 import fs from 'fs';
 import chalk from 'chalk';
 import { getLatestChanges } from './get-latest-changes.js';
+import { TEMPLATES_PATCHES } from '../src/scripts/patch-templates.js';
 
 const repos = {
   'system': 'moo-man/WrathAndGlory-FoundryVTT',
@@ -11,16 +12,37 @@ async function checkTemplates(changes, name) {
   // In the future we will need the name to differentiate between system's and library's templates
   // but for now we have only system's templates
 
-  const templateChanges = changes.changedFiles.filter(file => {
-    return file.filename.endsWith('.hbs') && 
-           fs.existsSync(`template/${file.filename}`);
+  const templateChanges = changes.changedFiles
+    .filter((file) => file.filename.endsWith('.hbs'))
+    .filter((file) => TEMPLATES_PATCHES[file.filename.replace('.hbs', '').replace('static/templates/', '')]);
+
+  const obsoletePatches = [];
+  templateChanges.forEach((file) => {
+    const patches = TEMPLATES_PATCHES[file.filename.replace('.hbs', '').replace('static/templates/', '')];
+    let patchedContent = file.content;
+    Object.entries(patches).forEach(([english, polish]) => {
+      const contentBefore = patchedContent;
+      patchedContent = patchedContent.replaceAll(english, polish);
+      if (patchedContent === contentBefore) {
+        obsoletePatches.push({
+          filename: file.filename,
+          english: english,
+          polish: polish,
+        });
+      }
+    });
   });
 
   if (templateChanges.length > 0) {
-    console.log(chalk.blue('\nModified templates:'));
+    console.log(chalk.yellow('\nModified templates:'));
     templateChanges.forEach(file => {
       console.log(chalk.yellow(`${file.status === 'modified' ? 'M' : 'D'} ${file.filename}`));
     });
+
+    if (obsoletePatches.length > 0) {
+      console.log(chalk.yellow('\nObsolete patches:'));
+      obsoletePatches.forEach(patch => console.log(chalk.yellow(`- ${patch.filename}: "${patch.english}" -> "${patch.polish}"`)));
+    }
   } else {
     console.log(chalk.green('No template changes found'));
   }

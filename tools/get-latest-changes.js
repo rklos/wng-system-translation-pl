@@ -68,11 +68,15 @@ export async function getLatestChanges(repo) {
     return {
       tagName,
       previousTag,
-      changedFiles: compareData.files.map(f => ({
-        filename: f.filename,
-        status: f.status,
-        additions: f.additions,
-        deletions: f.deletions
+      changedFiles: await Promise.all(compareData.files.map(async (f) => {
+        const content = await fetch(f.raw_url);
+        return {
+          filename: f.filename,
+          status: f.status,
+          additions: f.additions,
+          deletions: f.deletions,
+          content: await content.text(),
+        }
       }))
     };
   } catch (error) {

@@ -61,8 +61,8 @@ export function patchTemplates() {
     });
 
     if (path in TEMPLATES_PATCHES) {
-      const overrides = TEMPLATES_PATCHES[path];
-      Object.entries(overrides).forEach(([english, polish]) => {
+      const patches = TEMPLATES_PATCHES[path];
+      Object.entries(patches).forEach(([english, polish]) => {
         htmlString = htmlString.replaceAll(english, polish);
       });
     }
