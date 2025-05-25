@@ -5,7 +5,8 @@
   "scripts": {
     "build": "rollup -c",
     "postbuild": "node tools/bundle-jsons.js",
-    "report": "node tools/report-changes.js"
+    "report": "node tools/report-changes.js",
+    "sync": "node tools/sync-translations-with-wfrp.js"
   },
   "repository": {
     "type": "git",
