@@ -1,3 +1,3 @@
 export function log(message) {
-  console.log(`[WNG-System-Translation-PL] ${message}`);
+  console.log(`%cWNG-System-Translation-PL%c ${message}`, 'background-color: #ff0000; color: white; padding: 2px 6px; border-radius: 4px;', '');
 }
