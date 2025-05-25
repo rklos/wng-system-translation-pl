@@ -1,5 +1,6 @@
 export function reorderSkills() {
   const OriginalSkillsModel = SkillsModel;
+  // TODO: modify static method by `SkillsModel.defineSchema = () => {}` instead of overriding the whole class????
   class SkillsModelPL extends OriginalSkillsModel {
     static defineSchema() {
         const {
