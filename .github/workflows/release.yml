@@ -64,7 +64,8 @@ jobs:
       - name: Create Release
         uses: ncipollo/release-action@v1.9.0
         with:
-          allowUpdates: true # Set this to false if you want to prevent updating existing releases
+          allowUpdates: true
+          omitBodyDuringUpdate: true
           token: ${{ secrets.GITHUB_TOKEN }}
           name: ${{ github.event.release.name }}
           draft: ${{ github.event.release.unpublished }}
