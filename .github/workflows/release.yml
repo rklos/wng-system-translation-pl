@@ -39,7 +39,7 @@ jobs:
 
           # The message for the commit.
           # Default: 'Commit from GitHub Actions (name of the workflow)'
-          message: 'Bump version to ${{ github.event.release.tag_name }}'
+          message: 'Bump version to ${{ steps.tag.outputs.tag }}'
 
           # The way the action should handle pathspec errors from the add and remove commands. Three options are available:
           # - ignore -> errors will be logged but the step won't fail
