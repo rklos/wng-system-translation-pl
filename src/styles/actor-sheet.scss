@@ -1,0 +1,10 @@
+.wrath-and-glory.sheet.actor {
+  .stats {
+    .wrapper .skills {
+      .skill label > span:nth-child(1) {
+        // Remove artificial space on the left of the skill name to prevent it from wrapping to the next line
+        flex: unset;
+      }
+    }
+  }
+}
