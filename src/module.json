@@ -48,10 +48,10 @@
   },
   "coreTranslation": true,
   "scripts": [
-    "scripts/main.js"
+    "wng-pl.js"
   ],
   "styles": [
-    "styles/main.css"
+    "wng-pl.css"
   ],
   "languages": [
     {

@@ -3,7 +3,7 @@
   "version": "1.1.3",
   "type": "module",
   "scripts": {
-    "build": "rollup -c",
+    "build": "vite build",
     "postbuild": "node tools/bundle-jsons.js",
     "report": "node tools/report-changes.js",
     "sync": "node tools/sync-translations-with-wfrp.js"
@@ -19,10 +19,8 @@
   "homepage": "https://github.com/rklos/wng-system-translation-pl#readme",
   "devDependencies": {
     "chalk": "5.4.1",
-    "rollup": "4.40.2",
-    "rollup-plugin-copy": "3.5.0",
-    "rollup-plugin-delete": "3.0.1",
-    "rollup-plugin-scss": "4.0.1",
-    "sass": "1.89.0"
+    "fs-extra": "^11.3.0",
+    "sass": "1.89.0",
+    "vite": "^6.3.5"
   }
 }
