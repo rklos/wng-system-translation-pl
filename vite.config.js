@@ -8,6 +8,7 @@ export default defineConfig({
       fileName: 'wng-pl',
       formats: ['es']
     },
+    minify: false,
     emptyOutDir: true,
   },
   css: {
