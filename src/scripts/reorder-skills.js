@@ -24,31 +24,29 @@ export function reorderSkills() {
       ...rest
     } = originalDefineSchema();
     return {
-        // Left
-        investigation,
-        athletics,
-        awareness,
-        leadership,
-        insight,
-        tech,
-        medicae,
-        psychicMastery,
-        deception,
-        // Right
-        persuasion,
-        pilot,
-        cunning,
-        survival,
-        stealth,
-        ballisticSkill,
-        weaponSkill,
-        scholar,
-        intimidation,
-        ...rest,
-    }
+      // Left
+      investigation,
+      athletics,
+      awareness,
+      leadership,
+      insight,
+      tech,
+      medicae,
+      psychicMastery,
+      deception,
+      // Right
+      persuasion,
+      pilot,
+      cunning,
+      survival,
+      stealth,
+      ballisticSkill,
+      weaponSkill,
+      scholar,
+      intimidation,
+      ...rest,
+    };
   };
 
-  AgentSkillsModel.defineSchema = () => {
-    return SkillsModel.defineSchema();
-  };
+  AgentSkillsModel.defineSchema = () => SkillsModel.defineSchema();
 }

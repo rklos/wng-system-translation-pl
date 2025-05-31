@@ -8,6 +8,9 @@ export default [
         Hooks: 'readonly',
         Handlebars: 'readonly',
         game: 'readonly',
+
+        SkillsModel: 'readonly',
+        AgentSkillsModel: 'readonly',
       },
     },
   },

@@ -5,7 +5,7 @@ export const TEMPLATES_PATCHES = {
     'ITEM TRAITS': 'CECHY PRZEDMIOTU',
     'Custom Traits': 'Dodatkowe Cechy',
     'FORMAT - Trait 1: Trait 1 Description | Trait 2: Trait 2 Description | etc.': 'FORMAT - Cecha 1: Opis Cechy 1. | Cecha 2: Opis Cechy 2. | itd.',
-    'Update': 'Zapisz',
+    Update: 'Zapisz',
   },
   'chat/roll/ability/ability-use': {
     'Roll Damage': 'Rzuć na Obrażenia',
@@ -14,7 +14,7 @@ export const TEMPLATES_PATCHES = {
     'Roll Damage': 'Rzuć na Obrażenia',
   },
   'chat/roll/base/dice-container': {
-    'Shifted': 'Przeniesione',
+    Shifted: 'Przeniesione',
   },
   'chat/roll/common/common-buttons': {
     'Roll Complication': 'Rzuć na Komplikację',
@@ -34,9 +34,9 @@ export const TEMPLATES_PATCHES = {
     'Roll Mutation': 'Rzuć na Mutację',
   },
   'chat/roll/power/power-buttons': {
-    'Potency': 'Moc',
-    'Spent': 'Użyto',
-    'Perils of the Warp': 'Groza Osnowy'
+    Potency: 'Moc',
+    Spent: 'Użyto',
+    'Perils of the Warp': 'Groza Osnowy',
   },
   'chat/roll/weapon/weapon-buttons': {
     'Roll Complication': 'Rzuć na Komplikację',
@@ -54,7 +54,7 @@ export function patchTemplates() {
     const originalPath = `systems/wrath-and-glory/template/${path}.hbs`;
 
     let htmlString = await new Promise((resolve, reject) => {
-      game.socket.emit("template", originalPath, resp => {
+      game.socket.emit('template', originalPath, (resp) => {
         if (resp.error) return reject(new Error(resp.error));
         return resolve(resp.html);
       });
@@ -62,7 +62,7 @@ export function patchTemplates() {
 
     if (path in TEMPLATES_PATCHES) {
       const patches = TEMPLATES_PATCHES[path];
-      Object.entries(patches).forEach(([english, polish]) => {
+      Object.entries(patches).forEach(([ english, polish ]) => {
         htmlString = htmlString.replaceAll(english, polish);
       });
     }
