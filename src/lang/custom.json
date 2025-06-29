@@ -1,5 +1,7 @@
 {
   "// custom keys which are not present in W&G system nor WH library": "",
   "ED Values": "Wartość DK",
-  "Add Dice Value": "Dodaj wartość kości"
+  "Add Dice Value": "Dodaj wartość kości",
+  "Submit": "Zatwierdź",
+  "Roll": "Rzuć"
 }

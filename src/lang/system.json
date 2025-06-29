@@ -338,8 +338,8 @@
   "PSYCHIC_POWER.WOUNDS": "Rany",
   "PSYCHIC_POWER.SHOCK": "Trauma",
   "PSYCHIC_POWER.MORTAL": "Śmiertelne",
-  "PSYCHIC_POWER.BOUND": "Związana",
-  "PSYCHIC_POWER.UNBOUND": "Niezwiązana",
+  "PSYCHIC_POWER.BOUND": "Uwiązana",
+  "PSYCHIC_POWER.UNBOUND": "Wyzwolona",
   "PSYCHIC_POWER.TRANSCENDENT": "Transcendentna",
 
   "POWER.POTENCY_COST": "Koszt",

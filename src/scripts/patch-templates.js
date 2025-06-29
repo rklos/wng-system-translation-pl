@@ -36,6 +36,7 @@ export const TEMPLATES_PATCHES = {
     Potency: 'Moc',
     Spent: 'Użyto',
     'Perils of the Warp': 'Groza Osnowy',
+    'Roll Complication': 'Rzuć na Komplikację',
   },
   'chat/roll/weapon/weapon-buttons': {
     'Roll Complication': 'Rzuć na Komplikację',
@@ -45,6 +46,10 @@ export const TEMPLATES_PATCHES = {
     '<label style="visibility: hidden">ED</label>': '<label style="visibility: hidden">DK</label>',
     '<div>Value</div>': '<div>Wartość</div>',
     '<div>Dice</div>': '<div>Kość</div>',
+  },
+  'actor/actor-combat': {
+    'No Weapons Equipped': 'Nie posiada broni',
+    'No Armour Equipped': 'Nie posiada pancerza',
   },
 };
 
