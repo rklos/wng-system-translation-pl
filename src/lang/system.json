@@ -29,6 +29,17 @@
   "ABILITY.DISPLAY": "Wyświetl",
   "ABILITY.TYPE": "Typ",
   "ABILITY.DAMAGE": "Obrażenia",
+  "ABILITY.ED": "DK",
+  "ABILITY.AP": "PP",
+  "ABILITY.OTHER": "Inne",
+  "ABILITY.WOUNDS": "Rany",
+  "ABILITY.SHOCK": "Trauma",
+  "ABILITY.MORTAL": "Śmiertelne",
+  "ABILITY.BASE": "Podstawa",
+  "ABILITY.BONUS": "Bonus",
+  "ABILITY.RANK": "Ranga",
+  "ABILITY.DICE": "Kość",
+  "ABILITY.S": "Inne",
   "ABILITY.TEST_SELF": "Test własny",
 
   "ABILITY_TYPE.BATTLECRY": "Okrzyk bojowy",
@@ -64,7 +75,7 @@
   "ARMOUR.VALUE": "Wartość",
   "ARMOUR.RARITY": "Rzadkość",
   "ARMOUR.KEYWORDS": "Słowa-kluczowe",
-  "ARMOUR.INVULNERABLE": "Niezwyciężony",
+  "ARMOUR.INVULNERABLE": "Nieprzebijalny",
   "ARMOUR.QUANTITY": "Ilość",
 
   "ASCENSION.NAME": "Nazwa",
@@ -111,6 +122,7 @@
   "FACTION.ORIGIN": "Pochodzenie",
   "FACTION.DESCRIPTION": "Opis",
   "FACTION.EFFECT": "Efekt",
+  "FACTION.CHOSEN": "Wybrana",
   "FACTION.ACCOMPLISHMENT": "Osiągnięcie",
   "FACTION.GOAL": "Cele",
   "FACTION.OBJECTIVES": "Zadania",
@@ -129,6 +141,9 @@
   "ATTRIBUTE.WILLPOWER_ABREV": "SW",
   "ATTRIBUTE.INTELLECT_ABREV": "Int",
   "ATTRIBUTE.FELLOWSHIP_ABREV": "Ogd",
+  "ATTRIBUTE.BASE": "Podstawa",
+  "ATTRIBUTE.ADVANCES": "Rozwinięcia",
+  "ATTRIBUTE.TOTAL": "Suma",
 
   "BIO.ARCHETYPE": "Archetyp",
   "BIO.FACTION": "Frakcja",
@@ -236,12 +251,16 @@
 
   "HEADER.TALENT": "Talent",
   "HEADER.ABILITY": "Zdolność",
+  "HEADER.ABILITIES": "Zdolności",
   "HEADER.PSYCHIC_POWER": "Moc Psioniczna",
   "HEADER.WEAPON": "Broń",
   "HEADER.ARMOUR": "Pancerz",
   "HEADER.GEAR": "Wyposażenie",
   "HEADER.EFFECT": "Efekt",
   "HEADER.EFFECTS": "Efekty",
+  "HEADER.AMMO_EFFECTS": "Efekty amunicji",
+  "HEADER.UPGRADE_EFFECTS": "Efekty ulepszeń",
+  "HEADER.ACTOR_EFFECTS": "Efekty aktorów",
   "HEADER.NAME": "Nazwa",
   "HEADER.RATING": "Poziom",
   "HEADER.COST": "Koszt",
@@ -249,7 +268,9 @@
   "HEADER.SPENT": "Wyd.",
   "HEADER.TOTAL": "Cał.",
   "HEADER.DEFENCE": "Obrona",
+  "HEADER.DEF": "Obr.",
   "HEADER.RESILIENCE": "Odporność",
+  "HEADER.RES": "Odp.",
   "HEADER.DETERMINATION": "Determinacja",
   "HEADER.SHOCK": "Trauma",
   "HEADER.CONVICTION": "Upór",
@@ -265,7 +286,7 @@
   "HEADER.AWARENESS": "Czujność",
   "HEADER.PASSIVEAWARENESS": "Pasywna Czujność",
   "HEADER.STEALTH": "Ukrywanie się",
-  "HEADER.STEALTH_SCORE": "Wynik Ukrywania się",
+  "HEADER.STEALTH_SCORE": "Ukrywanie się",
   "HEADER.WEAPON_UPGRADE": "Ulepszenia broni",
   "HEADER.AMMO": "Amunicja",
   "HEADER.AUGMETIC": "Wszczepy",
@@ -285,6 +306,7 @@
   "HEADER.MAN": "Obsł.",
   "HEADER.RARITY": "Rzadkość",
   "HEADER.VALUE": "Wartość",
+  "HEADER.MUTATIONS": "Mutacje",
 
   "KEYWORD.NAME": "Nazwa",
   "KEYWORD.DESCRIPTION": "Opis",
@@ -347,7 +369,7 @@
   "RESOURCE.WRATH": "Furia",
   "RESOURCE.INFLUENCE": "Wpływy",
   "RESOURCE.WEALTH": "Majątek",
-  "RESOURCE.EXPERIENCE": "Doświadczenie",
+  "RESOURCE.EXPERIENCE": "Dośw.",
   "RESOURCE.RUIN": "Zguba",
   "RESOURCE.GLORY": "Chwała",
 
@@ -375,10 +397,11 @@
 
   "SIZE.TINY": "Malutki",
   "SIZE.SMALL": "Mały",
+  "SIZE.MEDIUM": "Średni",
   "SIZE.AVERAGE": "Średni",
   "SIZE.LARGE": "Duży",
-  "SIZE.HUGE": "Ogromny",
-  "SIZE.GARGANTUAN": "Kolosalny",
+  "SIZE.HUGE": "Wielki",
+  "SIZE.GARGANTUAN": "Ogromny",
 
   "SKILL.DEFAULT": "Domyślny",
   "SKILL.ATHLETICS": "Atletyka",
@@ -399,8 +422,11 @@
   "SKILL.SURVIVAL": "Przetrwanie",
   "SKILL.TECH": "Korzystanie z technologii",
   "SKILL.WEAPON_SKILL": "Walka wręcz",
+  "SKILL.BASE": "Podstawa",
+  "SKILL.RATING": "Rozwinięcia",
 
   "TAB.EFFECTS": "EFEKTY",
+  "TAB.ABILITIES": "ZDOLNOŚCI",
   "TAB.COMBAT": "WALKA",
   "TAB.GEAR": "WYPOS.",
   "TAB.NOTES": "NOTATKI",
@@ -436,7 +462,7 @@
   "TITLE.BENEFITS": "KORZYŚCI",
   "TITLE.POTENCY": "MOC",
   "TITLE.UPGRADES": "ULEPSZENIA",
-  "TITLE.ADVANCES": "STATUS",
+  "TITLE.ADVANCES": "ROZWINIĘCIA",
   "TITLE.DETAILS": "SZCZEGÓŁY",
   "TITLE.COMPLEMENT": "ZAŁOGA",
   "TITLE.MOB_ABILITIES": "ZDOLNOŚCI HORDY",
@@ -448,6 +474,7 @@
   "WEAPON.NAME": "Nazwa",
   "WEAPON.DESCRIPTION": "Opis",
   "WEAPON.DAMAGE": "Obrażenia",
+  "WEAPON.DMG": "Obr.",
   "WEAPON.AP": "PP",
   "WEAPON.ED": "DK",
   "WEAPON.CATEGORY": "Kategoria",
@@ -461,6 +488,7 @@
   "WEAPON.DIE_VALUE": "Wartość Kości",
   "WEAPON.ATTACK": "Atak",
   "WEAPON.QUANTITY": "Ilość",
+  "WEAPON.CALLED_SHOT": "Atak mierzony",
   "WEAPON.AIM": "Celowanie",
   "WEAPON.AIMED": "Wycelowany",
   "WEAPON.CHARGING": "Szarżowanie",
@@ -504,11 +532,10 @@
   "ROLL.CannotFindTable": "Nie można znaleźć tabeli. Zaimportuj ją z kompendium lub utwórz własną tabelę. Musi mieć nazwę {name}",
   "ERROR.NoAvailableActors": "Brak dostępnych aktorów do wyboru!",
 
-  "// it should be in english because scripts are going to use it for table names": "",
-  "TABLE.COMBAT_COMPLICATIONS" : "Combat Complications",
-  "TABLE.PERILS_OF_THE_WARP" : "Perils of the Warp",
-  "TABLE.COMPLICATION_CONSEQUENCES" : "Complication Consequences",
-  "TABLE.CRITICAL_HIT_TABLE" : "Critical Hit Table",
+  "TABLE.COMBAT_COMPLICATIONS" : "Komplikacje w walce",
+  "TABLE.PERILS_OF_THE_WARP" : "Grozy Osnowy",
+  "TABLE.COMPLICATION_CONSEQUENCES" : "Konsekwencje komplikacji",
+  "TABLE.CRITICAL_HIT_TABLE" : "Tabela Trafień Krytycznych",
 
   "AUTOCALC.DEFENCE": "Automatyczne obliczanie Obrony",
   "AUTOCALC.RESILIENCE": "Automatyczne obliczanie Wytrzymałości",
@@ -621,6 +648,15 @@
   "BugReport.ErrorName1": "Dołącz swój Tag Discord lub email w sekcji Nazwa.",
   "BugReport.ErrorName2": "Tag Discord lub email są wymagane w sekcji Nazwa.",
   "BUTTON.PostBug": "Zgłoś błąd W&G",
+
+  "SETTINGS.TableSettings": "Ustawienia Tabel",
+  "SETTINGS.TableConfigure": "Konfiguruj Tabelę",
+  "SETTINGS.TableSettingsHint": "Ustawienia Tabel",
+
+  "TableSetting.critical": "Tabela Trafień Krytycznych",
+  "TableSetting.perilsritarm": "Grozy Osnowy",
+  "TableSetting.combatComplications": "Komplikacje w walce",
+  "TableSetting.complicationsConsequences": "Konsekwencje komplikacji",
   
   "WH": {
     "Trigger": {
@@ -639,6 +675,201 @@
       "rollWeaponTest": "W trakcie testu broni (rollWeaponTest)",
       "preRollPowerTest": "Przed testem mocy (preRollPowerTest)",
       "rollPowerTest": "W trakcie testu mocy (rollPowerTest)"
+    },
+    "Models": {
+      "ability": {
+        "FIELDS": {
+          "cost": {
+            "label": "Koszt"
+          },
+          "requirements": {
+            "label": "Wymagania"
+          },
+          "display": {
+            "label": "Pokaż w walce",
+            "hint": "Pokaż przedmiot w zakładce Walka aktora"
+          },
+          "abilityType": {
+            "label": "Typ"
+          }
+        }
+      },
+      "archetype": {
+        "FIELDS": {
+          "tier": {
+            "label": "Poziom"
+          },
+          "cost": {
+            "label": "PD"
+          },
+          "influence": {
+            "label": "Wpływ"
+          }
+        }
+      },
+      "armour": {
+        "FIELDS": {
+          "rating": {
+            "label": "Wartość"
+          },
+          "invulnerable": {
+            "label": "Nieprzebijalny"
+          }
+        }
+      },
+      "ascension": {
+        "FIELDS": {
+          "cost": {
+            "label": "Koszt"
+          },
+          "requirements": {
+            "label": "Wymagania"
+          },
+          "influence": {
+            "label": "Wpływ"
+          },
+          "keywords": {
+            "label": "Słowa-kluczowe"
+          }
+        }
+      },
+      "augmetic": {
+        "FIELDS": {
+          "requirements": {
+            "label": "Wymagania"
+          },
+          "keywords": {
+            "label": "Słowa-kluczowe"
+          }
+        }
+      },
+      "gear": {
+        "FIELDS": {
+          "keywords": {
+            "label": "Słowa-kluczowe"
+          }
+        }
+      },
+      "species": {
+        "FIELDS": {
+          "cost": {
+            "label": "PD"
+          },
+          "speed": {
+            "label": "Szybkość"
+          },
+          "size": {
+            "label": "Rozmiar"
+          }
+        }
+      },
+      "talent": {
+        "FIELDS": {
+          "cost": {
+            "label": "Koszt"
+          },
+          "requirements": {
+            "label": "Wymagania"
+          },
+          "display": {
+            "label": "Pokaż w walce",
+            "hint": "Pokaż przedmiot w zakładce Walka aktora"
+          }
+        }
+      },
+      "weapon" : {
+        "FIELDS" : {
+          "category" : {
+            "label" : "Kategoria"
+          },
+          "salvo" : {
+            "label" : "Salwa"
+          },
+          "range" : {
+            "melee" : {
+              "label" : "Zasięg"
+            },
+            "thrown" : {
+              "label" : "Rzut S ×"
+            }
+          },
+          "twinned" : {
+            "label" : "Podwojone"
+          },
+          "combi" : {
+            "id" : {
+              "label" : "Multi"
+            }
+          }
+        }
+      },
+      "psychicPower" : {
+        "FIELDS" : {
+          "cost" : {
+            "label" : "PD"
+          },
+          "prerequisites" : {
+            "label" : "Wymagania wstępne"
+          },
+          "activation" : {
+            "label" : "Aktywacja"
+          },
+          "duration" : {
+            "label" : "Czas trwania"
+          },
+          "dn" : {
+            "label" : "ST"
+          },
+          "range" : {
+            "label" : "Zasięg"
+          },
+          "multiTarget" : {
+            "label" : "Wiele celów"
+          },
+          "keywords" : {
+            "label" : "Słowa-kluczowe"
+          }
+        }
+      }
+    },
+    "Components": {
+      "test": {
+        "FIELDS": {
+          "self": {
+            "label": "Test własny",
+            "hint": "Ten test jest przeznaczony do rzucania przez właściciela."
+          },
+          "dn": {
+            "label": "ST"
+          },
+          "type": {
+            "label": "Typ"
+          }
+        }
+      },
+      "physical": {
+        "FIELDS": {
+          "quantity": {
+            "label": "Ilość"
+          },
+          "value": {
+            "label": "Wartość"
+          },
+          "keywords": {
+            "label": "Słowa-kluczowe"
+          },
+          "rarity": {
+            "label": "Rzadkość"
+          }
+        }
+      },
+      "damage": {
+        "FIELDS": {
+          "enabled": {
+            "label": "Włącz obrażenia"
+          }
+        }
+      }
     }
   }
 }

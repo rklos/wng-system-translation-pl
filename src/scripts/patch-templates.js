@@ -5,7 +5,6 @@ export const TEMPLATES_PATCHES = {
     'ITEM TRAITS': 'CECHY PRZEDMIOTU',
     'Custom Traits': 'Dodatkowe Cechy',
     'FORMAT - Trait 1: Trait 1 Description | Trait 2: Trait 2 Description | etc.': 'FORMAT - Cecha 1: Opis Cechy 1. | Cecha 2: Opis Cechy 2. | itd.',
-    Update: 'Zapisz',
   },
   'chat/roll/ability/ability-use': {
     'Roll Damage': 'Rzuć na Obrażenia',
@@ -51,7 +50,7 @@ export const TEMPLATES_PATCHES = {
 
 export function patchTemplates() {
   Object.keys(TEMPLATES_PATCHES).forEach(async (path) => {
-    const originalPath = `systems/wrath-and-glory/template/${path}.hbs`;
+    const originalPath = `systems/wrath-and-glory/templates/${path}.hbs`;
 
     let htmlString = await new Promise((resolve, reject) => {
       game.socket.emit('template', originalPath, (resp) => {

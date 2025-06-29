@@ -1,24 +1,17 @@
 .wrath-and-glory.sheet.actor {
-  .stats {
-    .wrapper .skills {
-      .skill label > span:nth-child(1) {
-        // Remove artificial space on the left of the skill name to prevent it from wrapping to the next line
-        flex: unset;
+  [data-application-part="stats"] {
+    .skills {
+      .label {
+        span {
+          // Remove artificial space on the left of the skill name to prevent it from wrapping to the next line
+          flex: unset;
+
+          &:nth-child(3) {
+            min-width: 40px;
+            padding-right: 2px;
+          }
+        }
       }
-    }
-  }
-
-  .talents.active {
-    h1 {
-      width: unset;
-      min-width: 280px;
-    }
-  }
-
-  .notes-tab {
-    h1 {
-      width: unset;
-      min-width: 150px;
     }
   }
 }
