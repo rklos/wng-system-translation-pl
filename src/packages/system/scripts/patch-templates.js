@@ -1,4 +1,4 @@
-import { log } from './utils/log.js';
+import { log } from '../../../utils/log.js';
 
 export const TEMPLATES_PATCHES = {
   'apps/item-traits': {

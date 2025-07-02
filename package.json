@@ -5,8 +5,8 @@
   "scripts": {
     "build": "vite build",
     "postbuild": "node tools/bundle-jsons.js",
-    "report": "node tools/report-changes.js",
-    "sync": "node tools/sync-translations-with-wfrp.js"
+    "report": "node tools/report-changes/report-changes.js",
+    "sync:wfrp4e": "node tools/sync/wfrp4e.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,9 @@
     "url": "https://github.com/rklos/wng-system-translation-pl/issues"
   },
   "homepage": "https://github.com/rklos/wng-system-translation-pl#readme",
+  "dependencies": {
+    "diff": "8.0.2"
+  },
   "devDependencies": {
     "@rklos/eslint-configs": "https://github.com/rklos/eslint-configs.git#1.1.1",
     "chalk": "5.4.1",
