@@ -1,1 +1,3 @@
-@use 'packages/styles';
+@use 'packages/custom/styles/main' as custom;
+@use 'packages/warhammer-library/styles/main' as warhammer-library;
+@use 'packages/wrath-and-glory/styles/main' as wrath-and-glory;

@@ -8,10 +8,10 @@ const directories = fs.readdirSync(packagesDir, { withFileTypes: true })
   .map((dirent) => dirent.name);
 
 // Generate @use statements
-const useStatements = directories.map((dirName) => `@use '${dirName}/styles/main' as ${dirName};\n`).join('');
+const useStatements = directories.map((dirName) => `@use 'packages/${dirName}/styles/main' as ${dirName};\n`).join('');
 
 // Write to styles.scss
-const stylesPath = path.join(process.cwd(), 'src', 'packages', 'styles.scss');
+const stylesPath = path.join(process.cwd(), 'src', 'main.scss');
 fs.writeFileSync(stylesPath, useStatements);
 
 console.log('Generated @use statements for all packages:');
