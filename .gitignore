@@ -1,5 +1,4 @@
 .DS_Store
-node_modules
-dist
-en.json
-wrath-and-glory.js
+/node_modules
+/dist
+/patches
