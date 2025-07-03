@@ -5,18 +5,16 @@ import path from 'path';
 export default defineConfig({
   build: {
     lib: {
-      entry: 'src/main.js',
+      entry: 'src/main.ts',
       fileName: 'wng-pl',
       formats: [ 'es' ],
     },
     minify: false,
     emptyOutDir: true,
   },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        api: 'modern-compiler',
-      },
+  resolve: {
+    alias: {
+      '~': path.resolve(__dirname, 'src'),
     },
   },
   plugins: [

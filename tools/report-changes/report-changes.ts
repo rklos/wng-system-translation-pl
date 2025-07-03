@@ -1,13 +1,14 @@
 import chalk from 'chalk';
-import { checkTemplates, checkTranslations } from './checks/index.js';
-import { getLatestChanges } from './get-latest-changes.js';
-import { sendNotification, reportError } from '../utils/discord.js';
-import * as packages from '../../src/packages/index.js';
-
-const PACKAGES_TO_CHECK = [ packages.system, packages.warhammerLibrary ];
+import * as packages from '~/packages';
+import type { Package } from '~/packages';
+import { checkTemplates, checkTranslations } from './checks';
+import { getLatestChanges } from './get-latest-changes';
+import { sendNotification, reportError } from '../utils/discord';
 
 async function checkChanges() {
-  for (const pkg of PACKAGES_TO_CHECK) {
+  for (const pkg of Object.values(packages) as Package[]) {
+    if (!('SUPPORTED_VERSION' in pkg)) continue;
+
     try {
       console.log(chalk.blue(`\n=== Checking ${pkg.PACKAGE} ===`));
       const changes = await getLatestChanges(pkg.REPO, pkg.SUPPORTED_VERSION);
@@ -18,8 +19,8 @@ async function checkChanges() {
 
       if (hasChanges) await sendNotification('Changes Check', `Changes found in ${pkg.PACKAGE}`);
     } catch (error) {
-      console.error(chalk.red(`Error processing ${module.lang}:`), error);
-      await reportError('Changes Check', error.message);
+      console.error(chalk.red(`Error processing ${pkg.PACKAGE}:`), error);
+      await reportError('Changes Check', error instanceof Error ? error.message : 'Unknown error');
     }
   }
 }

@@ -1,6 +1,6 @@
-import { log } from '../../../utils/log.js';
+import { log } from '~/utils/log';
 
-export const TEMPLATES_PATCHES = {
+export const TEMPLATES_PATCHES: Record<string, Record<string, string>> = {
   'apps/item-traits': {
     'ITEM TRAITS': 'CECHY PRZEDMIOTU',
     'Custom Traits': 'Dodatkowe Cechy',
@@ -57,8 +57,8 @@ export function patchTemplates() {
   Object.keys(TEMPLATES_PATCHES).forEach(async (path) => {
     const originalPath = `systems/wrath-and-glory/templates/${path}.hbs`;
 
-    let htmlString = await new Promise((resolve, reject) => {
-      game.socket.emit('template', originalPath, (resp) => {
+    let htmlString: string = await new Promise((resolve, reject) => {
+      game.socket?.emit('template', originalPath, (resp: { error?: string; html: string }) => {
         if (resp.error) return reject(new Error(resp.error));
         return resolve(resp.html);
       });

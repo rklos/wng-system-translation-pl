@@ -7,14 +7,14 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const ROOT_DIR = join(__dirname, '..');
 
-function bumpVersion(newVersionArg) {
+function bumpVersion(newVersionArg: string) {
   try {
     // Read package.json
     const packageJsonPath = join(ROOT_DIR, 'package.json');
     const packageJson = JSON.parse(readFileSync(packageJsonPath, 'utf8'));
 
     // Determine new version
-    let newVersion;
+    let newVersion: string;
     if (newVersionArg) {
       // Validate version format
       if (!/^\d+\.\d+\.\d+$/.test(newVersionArg)) {

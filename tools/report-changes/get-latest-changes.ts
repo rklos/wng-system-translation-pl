@@ -1,7 +1,8 @@
 import fs from 'fs';
 import chalk from 'chalk';
+import type { Changes } from './types';
 
-export async function getLatestChanges(repo, version) {
+export async function getLatestChanges(repo: string, version: string): Promise<Changes> {
   try {
     // Get latest release from GitHub API
     const response = await fetch(`https://api.github.com/repos/${repo}/releases/latest`);
@@ -28,8 +29,8 @@ export async function getLatestChanges(repo, version) {
     const localModuleJson = JSON.parse(fs.readFileSync('src/module.json', 'utf8'));
 
     // Find the module in relationships
-    const relationship = localModuleJson.relationships.systems?.find((s) => s.id === moduleId)
-                        || localModuleJson.relationships.requires?.find((r) => r.id === moduleId);
+    const relationship = localModuleJson.relationships.systems?.find((s: { id: string }) => s.id === moduleId)
+                        || localModuleJson.relationships.requires?.find((r: { id: string }) => r.id === moduleId);
 
     if (!version && relationship) {
       version = relationship.compatibility.verified;
@@ -61,22 +62,32 @@ export async function getLatestChanges(repo, version) {
     const compareResponse = await fetch(
       `https://api.github.com/repos/${repo}/compare/${previousTag}...${tagName}`,
     );
-    const compareData = await compareResponse.json();
+    const compareData = await compareResponse.json() as {
+      files: {
+        filename: string;
+        status: string;
+        additions: number;
+        deletions: number;
+        raw_url: string;
+      }[];
+    };
 
     console.log(chalk.blue(`\nNew release found! ${previousTag} -> ${tagName}`));
     return {
       tagName,
       previousTag,
-      changedFiles: await Promise.all(compareData.files.map(async (f) => {
-        const content = await fetch(f.raw_url);
-        return {
-          filename: f.filename,
-          status: f.status,
-          additions: f.additions,
-          deletions: f.deletions,
-          content: await content.text(),
-        };
-      })),
+      changedFiles: await Promise.all(
+        compareData.files.map(async (f) => {
+          const content = await fetch(f.raw_url);
+          return {
+            filename: f.filename,
+            status: f.status,
+            additions: f.additions,
+            deletions: f.deletions,
+            content: await content.text(),
+          };
+        }),
+      ),
     };
   } catch (error) {
     console.error(chalk.red('Error fetching latest changes:'), error);

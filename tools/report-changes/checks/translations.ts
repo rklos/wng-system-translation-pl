@@ -1,7 +1,9 @@
 import fs from 'fs';
 import chalk from 'chalk';
+import type { Package } from '~/packages';
+import type { Changes } from '../types';
 
-export async function checkTranslations(pkg, changes) {
+export async function checkTranslations(pkg: Package, changes: Changes) {
   const translationChanges = changes.changedFiles.filter((file) => file.filename.startsWith('lang/') && file.filename.endsWith('.json'));
 
   if (translationChanges.length > 0) {
@@ -14,17 +16,12 @@ export async function checkTranslations(pkg, changes) {
   );
   const remoteJson = await response.json();
 
-  let localJson = {};
-  try {
-    localJson = JSON.parse(fs.readFileSync(`src/packages/${pkg.PACKAGE}/lang.json`, 'utf8'));
-  } catch (error) {
-    if (error.code !== 'ENOENT') throw error;
-  }
+  const localJson = JSON.parse(fs.readFileSync(`src/packages/${pkg.PACKAGE}/lang.json`, 'utf8'));
 
-  const missingKeys = [];
-  const extraKeys = [];
+  const missingKeys: string[] = [];
+  const extraKeys: string[] = [];
 
-  function findDifferences(localObj, remoteObj, path = '') {
+  function findDifferences(localObj: Record<string, unknown>, remoteObj: Record<string, unknown>, path = '') {
     for (const key in remoteObj) {
       const currentPath = path ? `${path}.${key}` : key;
 
@@ -32,7 +29,11 @@ export async function checkTranslations(pkg, changes) {
         if (localObj[key] == null) {
           missingKeys.push(currentPath);
         } else {
-          findDifferences(localObj[key], remoteObj[key], currentPath);
+          findDifferences(
+            localObj[key] as Record<string, unknown>,
+            remoteObj[key] as Record<string, unknown>,
+            currentPath,
+          );
         }
       } else if (localObj[key] == null) {
         missingKeys.push(currentPath);

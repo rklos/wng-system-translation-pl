@@ -1,7 +1,9 @@
 import chalk from 'chalk';
-import { TEMPLATES_PATCHES } from '../../../src/packages/system/scripts/patch-templates.js';
+import { TEMPLATES_PATCHES } from '~/packages/wrath-and-glory/scripts/patch-templates';
+import type { Package } from '~/packages';
+import type { Changes } from '../types';
 
-export async function checkTemplates(pkg, changes) {
+export async function checkTemplates(pkg: Package, changes: Changes) {
   const templateChanges = changes.changedFiles
     .filter((file) => file.filename.endsWith('.hbs'))
     .filter((file) => TEMPLATES_PATCHES[file.filename.replace('.hbs', '').replace('static/templates/', '')]);

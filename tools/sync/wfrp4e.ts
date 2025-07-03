@@ -1,16 +1,32 @@
 import fs from 'fs';
-import { sendNotification, reportError } from '../utils/discord.js';
+import { sendNotification, reportError } from '../utils/discord';
 
 const REPO = 'foundryvttpl/wfrp4e-core-pl';
 const LANG_FILE = 'src/packages/warhammer-library/lang.json';
 
-function updateNestedValues(localObj, remoteObj, path = '', changedTranslations = []) {
+interface Change {
+  path: string;
+  old: unknown;
+  new: unknown;
+}
+
+function updateNestedValues(
+  localObj: Record<string, unknown>,
+  remoteObj: Record<string, unknown>,
+  path = '',
+  changedTranslations: Change[] = [],
+): Change[] {
   for (const key in localObj) {
     const currentPath = path ? `${path}.${key}` : key;
 
     if (typeof localObj[key] === 'object' && localObj[key] !== null) {
       if (remoteObj[key]) {
-        updateNestedValues(localObj[key], remoteObj[key], currentPath, changedTranslations);
+        updateNestedValues(
+          localObj[key] as Record<string, unknown>,
+          remoteObj[key] as Record<string, unknown>,
+          currentPath,
+          changedTranslations,
+        );
       }
     } else if (typeof localObj[key] === 'string' && remoteObj[key]) {
       if (localObj[key] !== remoteObj[key]) {
@@ -28,7 +44,7 @@ function updateNestedValues(localObj, remoteObj, path = '', changedTranslations 
   return changedTranslations;
 }
 
-async function reportChanges(changedTranslations) {
+async function reportChanges(changedTranslations: Change[]) {
   if (changedTranslations.length > 0) {
     console.log('\nUpdated translations:');
     changedTranslations.forEach(({ path, old, new: newValue }) => {
@@ -55,7 +71,7 @@ async function updateTranslations() {
     await reportChanges(changes);
   } catch (error) {
     console.error('Error updating translations:', error);
-    await reportError('Translation Sync', error.message);
+    await reportError('Translation Sync', error instanceof Error ? error.message : 'Unknown error');
   }
 }
 
