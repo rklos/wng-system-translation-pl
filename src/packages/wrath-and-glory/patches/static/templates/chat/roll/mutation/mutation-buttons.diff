@@ -1,0 +1,13 @@
+Index: static/templates/chat/roll/mutation/mutation-buttons.hbs
+===================================================================
+--- static/templates/chat/roll/mutation/mutation-buttons.hbs	en
++++ static/templates/chat/roll/mutation/mutation-buttons.hbs	pl
+@@ -1,6 +1,6 @@
+ {{> systems/wrath-and-glory/templates/chat/roll/base/base-buttons.hbs}}
+ {{#if result.isWrathComplication}}
+ <div class="wrapper">
+-        <button type="button" data-action="rollWrath">Roll Complication</button>
++        <button type="button" data-action="rollWrath">Rzuć na Komplikację</button>
+ </div>
+ {{/if}}
+\ No newline at end of file

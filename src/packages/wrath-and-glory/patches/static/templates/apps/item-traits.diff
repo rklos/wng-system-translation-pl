@@ -1,0 +1,21 @@
+Index: static/templates/apps/item-traits.hbs
+===================================================================
+--- static/templates/apps/item-traits.hbs	en
++++ static/templates/apps/item-traits.hbs	pl
+@@ -1,6 +1,6 @@
+ <div>
+ 
+-  <h3 class="centered">ITEM TRAITS</h3>
++  <h3 class="centered">CECHY PRZEDMIOTU</h3>
+   <div>
+     {{#each traits as |trait t|}}
+       <div class="form-group">
+@@ -18,7 +18,7 @@
+ 
+   </div>
+   <div class="form-group">
+-    <label>Custom Traits <i class="far fa-question-circle" style="margin-left:3px;" title="FORMAT - Trait 1: Trait 1 Description | Trait 2: Trait 2 Description | etc."></i></label>
++    <label>Dodatkowe Cechy <i class="far fa-question-circle" style="margin-left:3px;" title="FORMAT - Cecha 1: Opis Cechy 1. | Cecha 2: Opis Cechy 2. | itd."></i></label>
+     <div class="form-fields">
+       <input name="custom-traits" type="text" value="{{custom}}">
+     </div>

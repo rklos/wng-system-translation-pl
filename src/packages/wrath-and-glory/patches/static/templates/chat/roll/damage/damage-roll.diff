@@ -1,0 +1,29 @@
+Index: static/templates/chat/roll/damage/damage-roll.hbs
+===================================================================
+--- static/templates/chat/roll/damage/damage-roll.hbs	en
++++ static/templates/chat/roll/damage/damage-roll.hbs	pl
+@@ -1,6 +1,6 @@
+ <div class="wrath-and-glory chat roll damageRoll">
+     <div class="wrapper">
+-        <h3 data-tooltip="{{this.result.breakdown.ed}}" data-tooltip-direction="UP">{{context.title}} - Damage</h3>
++        <h3 data-tooltip="{{this.result.breakdown.ed}}" data-tooltip-direction="UP">{{context.title}} - Obrażenia</h3>
+ 
+         <div class="dice-container">
+             {{#each result.dice as |die index|}}
+@@ -47,13 +47,13 @@
+     </div>
+ 
+     {{#if context.appliedReport}}
+-    <h3 style="margin-top: 7px">Applied Damage</h3>
++    <h3 style="margin-top: 7px">Zadane Obrażenia</h3>
+     <div class="wrapper-input">
+         {{{context.appliedReport}}}
+     </div>
+     {{/if}}
+ 
+     {{#unless context.appliedReport}}
+-    <button type="button" data-action="applyDamage">Apply Damage</button>
++    <button type="button" data-action="applyDamage">Zadaj Obrażenia</button>
+     {{/unless}}
+ </div>
+\ No newline at end of file

@@ -1,0 +1,13 @@
+Index: static/templates/chat/roll/ability/ability-use.hbs
+===================================================================
+--- static/templates/chat/roll/ability/ability-use.hbs	en
++++ static/templates/chat/roll/ability/ability-use.hbs	pl
+@@ -9,7 +9,7 @@
+ 
+ {{#if result.damage}}
+ <div class="wrapper">
+-    <button type="button" data-action="rollDamage">Roll Damage</button>
++    <button type="button" data-action="rollDamage">Rzuć na Obrażenia</button>
+ </div>
+ {{/if}}
+ 

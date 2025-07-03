@@ -1,0 +1,13 @@
+Index: static/templates/chat/roll/base/dice-container.hbs
+===================================================================
+--- static/templates/chat/roll/base/dice-container.hbs	en
++++ static/templates/chat/roll/base/dice-container.hbs	pl
+@@ -9,7 +9,7 @@
+     </div>
+     {{#if result.shifted.length}}
+     <hr>
+-    <h4>Shifted</h4>
++    <h4>Przeniesione</h4>
+     <div class="dice-container">
+             {{#each result.shifted as |die|}}
+             <a class="die {{die.name}} shifted" data-action="toggleDie" data-index="{{die.index}}"><img src="{{die.img}}"/>

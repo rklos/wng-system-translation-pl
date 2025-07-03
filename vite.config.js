@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import fs from 'fs-extra';
 import path from 'path';
+import { injectPatches } from './.vite/load-patches';
 
 export default defineConfig({
   build: {
@@ -25,5 +26,6 @@ export default defineConfig({
         await fs.copy('src/module.json', 'dist/module.json');
       },
     },
+    injectPatches(),
   ],
 });

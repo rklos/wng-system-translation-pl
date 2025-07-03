@@ -1,0 +1,22 @@
+Index: static/templates/actor/actor-combat.hbs
+===================================================================
+--- static/templates/actor/actor-combat.hbs	en
++++ static/templates/actor/actor-combat.hbs	pl
+@@ -232,7 +232,7 @@
+                 <div class="list-row">
+                     <div class="row-content">
+                         <div class="list-name">
+-                            No Weapons Equipped
++                            Nie posiada broni
+                         </div>
+                     </div>
+                 </div>
+@@ -296,7 +296,7 @@
+                 <div class="list-row">
+                     <div class="row-content">
+                         <div class="list-name">
+-                            No Armour Equipped
++                            Nie posiada pancerza
+                         </div>
+                     </div>
+                 </div>

@@ -1,0 +1,14 @@
+Index: static/templates/chat/roll/mutation/mutation-roll.hbs
+===================================================================
+--- static/templates/chat/roll/mutation/mutation-roll.hbs	en
++++ static/templates/chat/roll/mutation/mutation-roll.hbs	pl
+@@ -6,7 +6,7 @@
+         
+         {{#if result.mutation}}
+         <div class="wrapper">
+-                <button type="button" data-action="rollMutation">Roll Mutation</button>
++                <button type="button" data-action="rollMutation">Rzuć na Mutację</button>
+         </div>
+         {{/if}}
+ </div>
+\ No newline at end of file
