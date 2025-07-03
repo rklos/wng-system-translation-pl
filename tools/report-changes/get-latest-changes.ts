@@ -1,24 +1,29 @@
 import fs from 'fs';
 import chalk from 'chalk';
+import { Octokit } from '@octokit/core';
+import { fetchGithubRawContent } from '../utils/fetch-github-raw-content';
 import type { Changes } from './types';
 
-export async function getLatestChanges(repo: string, version: string): Promise<Changes> {
+const octokit = new Octokit();
+
+export async function getLatestChanges(repository: string, version: string): Promise<Changes> {
   try {
+    const [ owner, repo ] = repository.split('/');
     // Get latest release from GitHub API
-    const response = await fetch(`https://api.github.com/repos/${repo}/releases/latest`);
-    const release = await response.json();
+    const response = await octokit.request('GET /repos/{owner}/{repo}/releases/latest', { owner, repo });
+    const release = response.data;
 
     // Get the tag name
     const tagName = release.tag_name;
 
     // Get module.json or system.json from the latest release
-    const moduleResponse = await fetch(`https://raw.githubusercontent.com/${repo}/${tagName}/module.json`);
+    const moduleResponse = await fetchGithubRawContent(repository, tagName, 'module.json');
     let moduleData;
     try {
       moduleData = await moduleResponse.json();
     } catch {
       // If module.json not found, try system.json
-      const systemResponse = await fetch(`https://raw.githubusercontent.com/${repo}/${tagName}/system.json`);
+      const systemResponse = await fetchGithubRawContent(repository, tagName, 'system.json');
       moduleData = await systemResponse.json();
     }
 
@@ -59,25 +64,20 @@ export async function getLatestChanges(repo: string, version: string): Promise<C
     }
 
     // Get list of changed files between releases
-    const compareResponse = await fetch(
-      `https://api.github.com/repos/${repo}/compare/${previousTag}...${tagName}`,
-    );
-    const compareData = await compareResponse.json() as {
-      files: {
-        filename: string;
-        status: string;
-        additions: number;
-        deletions: number;
-        raw_url: string;
-      }[];
-    };
+    const compareResponse = await octokit.request('GET /repos/{owner}/{repo}/compare/{base}...{head}', {
+      owner,
+      repo,
+      base: previousTag,
+      head: tagName,
+    });
+    const compareData = compareResponse.data;
 
     console.log(chalk.blue(`\nNew release found! ${previousTag} -> ${tagName}`));
     return {
       tagName,
       previousTag,
       changedFiles: await Promise.all(
-        compareData.files.map(async (f) => {
+        compareData.files?.map(async (f) => {
           const content = await fetch(f.raw_url);
           return {
             filename: f.filename,
@@ -86,7 +86,7 @@ export async function getLatestChanges(repo: string, version: string): Promise<C
             deletions: f.deletions,
             content: await content.text(),
           };
-        }),
+        }) ?? [],
       ),
     };
   } catch (error) {

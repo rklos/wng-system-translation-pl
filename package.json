@@ -23,6 +23,7 @@
     "diff": "8.0.2"
   },
   "devDependencies": {
+    "@octokit/core": "7.0.2",
     "@rklos/eslint-configs": "github:rklos/eslint-configs#1.1.1",
     "chalk": "5.4.1",
     "discord.js": "14.21.0",

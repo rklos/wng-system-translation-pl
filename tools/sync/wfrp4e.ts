@@ -1,5 +1,6 @@
 import fs from 'fs';
 import { sendNotification, reportError } from '../utils/discord';
+import { fetchGithubRawContent } from '../utils/fetch-github-raw-content';
 
 const REPO = 'foundryvttpl/wfrp4e-core-pl';
 const LANG_FILE = 'src/packages/warhammer-library/lang.json';
@@ -63,7 +64,7 @@ async function updateTranslations() {
   try {
     const localJson = JSON.parse(fs.readFileSync(LANG_FILE, 'utf8'));
 
-    const response = await fetch(`https://raw.githubusercontent.com/${REPO}/main/lang/pl.json`);
+    const response = await fetchGithubRawContent(REPO, 'main', 'lang/pl.json');
     const remoteJson = await response.json();
 
     const changes = updateNestedValues(localJson, remoteJson);

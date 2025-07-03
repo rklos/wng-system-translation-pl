@@ -1,6 +1,7 @@
 import fs from 'fs';
 import chalk from 'chalk';
 import type { Package } from '~/packages';
+import { fetchGithubRawContent } from '../../utils/fetch-github-raw-content';
 import type { Changes } from '../types';
 
 export async function checkTranslations(pkg: Package, changes: Changes) {
@@ -11,9 +12,7 @@ export async function checkTranslations(pkg: Package, changes: Changes) {
     translationChanges.forEach((file) => console.log(chalk.yellow(`${file.status === 'modified' ? 'M' : 'D'} ${file.filename}`)));
   }
 
-  const response = await fetch(
-    `https://raw.githubusercontent.com/${pkg.REPO}/refs/tags/${changes.tagName}/static/lang/en.json`,
-  );
+  const response = await fetchGithubRawContent(pkg.REPO, `refs/tags/${changes.tagName}`, 'static/lang/en.json');
   const remoteJson = await response.json();
 
   const localJson = JSON.parse(fs.readFileSync(`src/packages/${pkg.PACKAGE}/lang.json`, 'utf8'));
