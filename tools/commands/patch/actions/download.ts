@@ -3,12 +3,12 @@ import { mkdirSync, existsSync, rmSync, cpSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { simpleGit } from 'simple-git';
-import config from '../../../tools.config';
+import config from '../../../../tools.config';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const ROOT_DIR = join(__dirname, '..', '..', '..');
-const PATCHES_DIR = join(ROOT_DIR, 'patches');
+const ROOT_DIR = join(__dirname, '..', '..', '..', '..');
+const PATCHES_DIR = join(ROOT_DIR, 'src', 'temp', 'patches');
 
 export default async function download(pkg: Package) {
   const fileTypes = config.patch[pkg.PACKAGE as keyof typeof config.patch];
