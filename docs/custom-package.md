@@ -17,11 +17,12 @@ This package serves as an extensible container for:
 Contains translation keys not present in original modules:
 
 ```json
-  "// custom keys which are not present in W&G system nor WH library": "",
-  "ED Values": "Wartość DK",
-  "Add Dice Value": "Dodaj wartość kości",
+{
+  "// custom keys which are not present in core system nor WH library": "",
+  "SYSTEM.PowerWeapon": "Energetyczna",
   "Submit": "Zatwierdź",
   "Roll": "Rzuć"
+}
 ```
 
 **Use Cases:**
@@ -36,13 +37,13 @@ Handles **differentiation cases** where English terms have the same name but req
 
 ```typescript
 // Polish translation differentiates between "power" and "energy" weapons
-WNG.meleeTypes.power = 'WNG.PowerWeapon';
+SYSTEM.meleeTypes.power = 'SYSTEM.PowerWeapon';
 ```
 
 The corresponding translation key is stored in `lang.json`:
 ```json
 {
-  "WNG.PowerWeapon": "Energetyczna"
+  "SYSTEM.PowerWeapon": "Energetyczna"
 }
 ```
 
@@ -80,11 +81,9 @@ Edit `lang.json` to add new translation keys:
 
 ```json
 {
-  "// custom keys which are not present in W&G system nor WH library": "",
-  "ED Values": "Wartość DK",
-  "Add Dice Value": "Dodaj wartość kości",
-  "Submit": "Zatwierdź",
-  "Roll": "Rzuć"
+  "// custom keys which are not present in core system nor WH library": "",
+  "SYSTEM.PowerWeapon": "Energetyczna",
+  "Custom.NewFeature": "Nowa Funkcja"
 }
 ```
 

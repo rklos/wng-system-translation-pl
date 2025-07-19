@@ -1,6 +1,6 @@
 # Documentation
 
-This directory contains comprehensive documentation for the Wrath & Glory System Translation project.
+This directory contains comprehensive documentation for the FoundryVTT System Translation project.
 
 ## Quick Start
 
@@ -24,7 +24,9 @@ This project translates FoundryVTT modules from English to Polish using a modula
 
 ```
 src/packages/
-├── wrath-and-glory/     # Core system translations
+├── {core-system}/        # Core system translations
+│   ├── temp/            # Temporary working directory
+│   └── patches/         # Generated patch files
 ├── warhammer-library/   # Shared Warhammer functionality
 ├── custom/              # Custom enhancements
 └── {future-packages}/   # Additional modules

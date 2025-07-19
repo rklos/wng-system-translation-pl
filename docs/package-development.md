@@ -1,6 +1,6 @@
 # Package Development
 
-This guide explains how to create and manage packages in the Wrath & Glory System Translation project.
+This guide explains how to create and manage packages in the FoundryVTT System Translation project.
 
 ## Overview
 
@@ -17,13 +17,16 @@ src/packages/{package-name}/
 ├── types.d.ts              # TypeScript declarations (optional)
 ├── scripts/                # TypeScript files
 │   └── {script-name}.ts
-└── styles/                 # SCSS files
-    └── {style-name}.scss
+├── styles/                 # SCSS files
+│   └── {style-name}.scss
+├── patches/                # Generated patch files (optional)
+└── temp/                   # Temporary working directory (optional)
+    └── patches/
 ```
 
 ### Package Types
 
-- **System Packages**: Core system translations (`wrath-and-glory`, `warhammer-library`)
+- **System Packages**: Core system translations (`{core-system}`, `warhammer-library`)
 - **Custom Package**: Quality-of-life enhancements (`custom`)
 - **Future Packages**: Additional modules as the project grows
 
@@ -88,7 +91,7 @@ JSON files containing translation key-value pairs:
 ```json
 {
   "// comment": "Documentation comment",
-  "TYPE.ActorType": "Typ Aktora",
+  "SYSTEM.ActorType": "Typ Aktora",
   "WH.Script": "Skrypt"
 }
 ```
