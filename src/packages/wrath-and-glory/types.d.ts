@@ -8,6 +8,10 @@ declare global {
   class AgentSkillsModel {
     static defineSchema: () => Record<string, unknown>;
   }
+
+  const WNG: {
+    vehicleTraits: Record<string, string>;
+  };
 }
 
 export {};
