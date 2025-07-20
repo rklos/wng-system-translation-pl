@@ -1,4 +1,4 @@
-// This should be translatable with lang.json, but it's hardcoded in the system's config.
+// TODO: remove when PR is merged: https://github.com/moo-man/WrathAndGlory-FoundryVTT/pull/361
 function translateVehicleTraits() {
   WNG.vehicleTraits = {
     allTerrain: 'Wszechstronny',

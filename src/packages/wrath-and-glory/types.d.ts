@@ -21,6 +21,10 @@ declare global {
     static defineSchema: () => Record<string, unknown>;
   }
 
+  class WnGItemSheet {
+    static TABS: Record<string, { id: string; group: string; label: string }>;
+  }
+
   class WNGTest {
     public data: {
       testData: {

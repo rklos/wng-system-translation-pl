@@ -4,6 +4,7 @@ import { reorderSkills } from './scripts/reorder-skills';
 import { translateConfig } from './scripts/config-translations';
 import { translateEffects } from './scripts/effects-translations';
 import { translateShifts } from './scripts/shift-translations';
+import { translateItemTabs } from './scripts/item-tabs-translation';
 
 export const PACKAGE = 'wrath-and-glory';
 export const REPO = 'moo-man/WrathAndGlory-FoundryVTT';
@@ -14,5 +15,6 @@ export function init() {
   translateConfig();
   translateEffects();
   translateShifts();
+  translateItemTabs();
   applyPatches(PACKAGE);
 }
