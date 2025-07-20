@@ -1,7 +1,8 @@
 import module from '~/module.json';
 import { applyPatches } from '~/utils/apply-patches';
 import { reorderSkills } from './scripts/reorder-skills';
-import { translateVehicleTraits } from './scripts/vehicle-traits';
+import { translateConfig } from './scripts/config-translations';
+import { translateEffects } from './scripts/effects-translations';
 
 export const PACKAGE = 'wrath-and-glory';
 export const REPO = 'moo-man/WrathAndGlory-FoundryVTT';
@@ -9,6 +10,7 @@ export const SUPPORTED_VERSION = module.relationships.systems[0].compatibility.v
 
 export function init() {
   reorderSkills();
-  translateVehicleTraits();
+  translateConfig();
+  translateEffects();
   applyPatches(PACKAGE);
 }

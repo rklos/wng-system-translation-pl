@@ -383,8 +383,8 @@
   "ROLL.CORRUPTION_REVERTED": "Spaczenie Anulowane",
   "ROLL.NewCorruptionLevel": "Wzrost Poziomu Spaczenia - Wykonaj Test Mutacji",
   "ROLL.MUTATION": "Mutacja",
-  "ROLL.FEAR": "Przestraszony",
-  "ROLL.TERROR": "Przerażony",
+  "ROLL.FEAR": "Strach",
+  "ROLL.TERROR": "Groza",
   "ROLL.STEALTH": "Ukrywanie się",
 
   "EDIT.POOL_DICE": "Kość Puli",
