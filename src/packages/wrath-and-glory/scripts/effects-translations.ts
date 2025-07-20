@@ -9,19 +9,15 @@ const SYSTEM_EFFECTS_TRANSLATIONS = {
 };
 
 const TRAIT_EFFECTS_TRANSLATIONS = {
-  // TODO: check if this works
   agonising: 'TRAIT.Agonising',
   arc: 'Atakowanie Pojazdu',
   assult: 'Atakowanie w czasie Sprintu',
-  // TODO: check if this works
   brutal: 'TRAIT.Brutal',
   force: {
     0: 'Broń Psioniczna',
     1: 'Broń Psioniczna (nie Psionik)',
   },
-  // TODO: check if this works
   flamer: 'CONDITION.OnFire',
-  // TODO: check if this works
   heavy: 'TRAIT.Heavy',
   inflict: 'Wywolaj Stan',
   kustom: 'Wybierz Cechę',
@@ -29,24 +25,18 @@ const TRAIT_EFFECTS_TRANSLATIONS = {
     0: 'Termiczna - Krótki zasięg',
     1: 'Termiczna - Krótki zasięg (Pojazd)',
   },
-  // TODO: check if this works
   parry: 'TRAIT.Parry',
-  // TODO: check if this works
   rad: 'TRAIT.Rad',
   rapidFire: 'Maszynowa - Krótki zasięg',
   sniper: 'Celna - Celowanie',
   spread: 'Rozrzutowa - Horda',
-  // TODO: check if this works
   unwieldy: 'TRAIT.Unwieldy',
-  // TODO: check if this works
   'waaagh!': 'TRAIT.Waaagh',
-  // TODO: check if this works
   warpWeapon: 'TRAIT.WarpWeapon',
   bulk: 'Zmniejsz Prędkość',
   powered: 'Zwiększ Siłę',
   // Commented in the original file
   // shield: 'Dodaj bonusy Tarczy',
-  // TODO: check if this works
   powerField: 'TRAIT.PowerField',
 };
 
