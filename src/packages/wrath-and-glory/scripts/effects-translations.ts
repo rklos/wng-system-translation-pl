@@ -11,7 +11,7 @@ const SYSTEM_EFFECTS_TRANSLATIONS = {
 const TRAIT_EFFECTS_TRANSLATIONS = {
   agonising: 'TRAIT.Agonising',
   arc: 'Atakowanie Pojazdu',
-  assult: 'Atakowanie w czasie Sprintu',
+  assault: 'Atakowanie w czasie Sprintu',
   brutal: 'TRAIT.Brutal',
   force: {
     0: 'Broń Psioniczna',
@@ -32,7 +32,7 @@ const TRAIT_EFFECTS_TRANSLATIONS = {
   spread: 'Rozrzutowa - Horda',
   unwieldy: 'TRAIT.Unwieldy',
   'waaagh!': 'TRAIT.Waaagh',
-  warpWeapon: 'TRAIT.WarpWeapon',
+  warpWeapons: 'TRAIT.WarpWeapon',
   bulk: 'Zmniejsz Prędkość',
   powered: 'Zwiększ Siłę',
   // Commented in the original file
@@ -58,15 +58,28 @@ const STATUS_EFFECTS_TRANSLATIONS = {
 };
 
 function executeTranslation(type: 'systemEffects' | 'traitEffects' | 'statusEffects', translations: Record<string, string | Record<number, string>>) {
+  const config = type === 'statusEffects'
+    ? CONFIG.statusEffects
+    : WNG[type];
+
+  const findEffect = (key: string) => {
+    if (Array.isArray(config)) {
+      return config.find((effect) => effect.id === key);
+    }
+
+    return config[key];
+  };
+
   Object.entries(translations).forEach(([ key, values ]) => {
     try {
-      if (typeof values === 'object') {
-        Object.entries<string>(values).forEach(([ index, value ]) => {
-          WNG[type][key].system!.scriptData![index as unknown as number].label = value;
-        });
-      } else {
-        WNG[type][key].system!.scriptData![0].label = values;
+      if (typeof values !== 'object') {
+        findEffect(key)!.system!.scriptData![0].label = values;
+        return;
       }
+
+      Object.entries<string>(values).forEach(([ index, value ]) => {
+        findEffect(key)!.system!.scriptData![index as unknown as number].label = value;
+      });
     } catch (error) {
       log(`Error translating ${type} ${key}: ${error}`);
     }

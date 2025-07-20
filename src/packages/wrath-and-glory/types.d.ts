@@ -1,4 +1,10 @@
 /* eslint-disable max-classes-per-file,@typescript-eslint/explicit-member-accessibility */
+interface EffectSystem {
+  system: {
+    transferData: Record<string, string>;
+    scriptData?: ScriptData[];
+  };
+}
 
 declare global {
   class SkillsModel {
@@ -30,21 +36,17 @@ declare global {
     changes?: { key: string; mode: number; value: number }[];
   }
 
-  interface TraitEffect extends Effect {
-    system: {
-      transferData: Record<string, string>;
-      scriptData?: ScriptData[];
-    };
+  interface CONFIG {
+    statusEffects: (CONFIG.StatusEffect & EffectSystem)[];
   }
 
-  const WNG: {
-    vehicleTraits: Record<string, string>;
-    testTypes: Record<string, string>;
-    resolveTests: Record<string, string>;
-    systemEffects: Record<string, SystemEffect>;
-    traitEffects: Record<string, TraitEffect>;
-    statusEffects: Record<string, SystemEffect>;
-  };
+  namespace WNG {
+    let vehicleTraits: Record<string, string>;
+    let testTypes: Record<string, string>;
+    let resolveTests: Record<string, string>;
+    const systemEffects: Record<string, CONFIG.StatusEffect & EffectSystem>;
+    const traitEffects: Record<string, CONFIG.StatusEffect & EffectSystem>;
+  }
 }
 
 export {};
