@@ -6,6 +6,12 @@ interface EffectSystem {
   };
 }
 
+interface ShiftedValue {
+  label: string;
+  dice: number[];
+  letter: string;
+}
+
 declare global {
   class SkillsModel {
     static defineSchema: () => Record<string, unknown>;
@@ -15,26 +21,30 @@ declare global {
     static defineSchema: () => Record<string, unknown>;
   }
 
-  interface ScriptData {
-    trigger: string;
-    script: string;
-    label: string;
-    options?: Record<string, string>;
-  }
-
-  interface Effect {
-    name: string;
-    system?: {
-      scriptData?: ScriptData[];
+  class WNGTest {
+    public data: {
+      testData: {
+        shifted: {
+          damage: ShiftedValue;
+          glory: ShiftedValue;
+          other: ShiftedValue;
+          potency: ShiftedValue;
+        };
+      };
     };
+
+    constructor(data: Record<string, unknown>);
   }
 
-  interface SystemEffect extends Effect {
-    id: string;
-    statuses: string[];
-    img: string;
-    changes?: { key: string; mode: number; value: number }[];
-  }
+  class AbilityRoll {}
+  class CorruptionTest {}
+  class DeterminationRoll {}
+  class InitiativeRoll {}
+  class MutationTest {}
+  class PowerTest {}
+  class ResolveTest {}
+  class StealthRoll {}
+  class WeaponTest {}
 
   interface CONFIG {
     statusEffects: (CONFIG.StatusEffect & EffectSystem)[];
