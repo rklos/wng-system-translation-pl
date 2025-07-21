@@ -11,6 +11,7 @@ export function translateShifts() {
 
   // @ts-expect-error - WNGTest is a class
   WNGTest = WNGTestPL;
+  // Set the prototype of constructor only (instances untouched)
   Object.setPrototypeOf(AbilityRoll, WNGTest);
   Object.setPrototypeOf(CorruptionTest, WNGTest);
   Object.setPrototypeOf(DeterminationRoll, WNGTest);
