@@ -27,6 +27,18 @@ declare global {
     static TABS: Record<string, { id: string; group: string; label: string }>;
   }
 
+  class RollDialog {
+    get tooltipConfig(): Record<string, Record<string, unknown>>;
+  }
+
+  class AttackDialog {
+    get tooltipConfig(): Record<string, Record<string, unknown>>;
+  }
+
+  class CommonDialog {}
+  class PowerDialog {}
+  class WeaponDialog {}
+
   class WNGTest {
     public data: {
       testData: {

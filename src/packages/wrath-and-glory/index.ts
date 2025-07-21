@@ -5,6 +5,7 @@ import { translateConfig } from './scripts/config-translations';
 import { translateEffects } from './scripts/effects-translations';
 import { translateShifts } from './scripts/shift-translations';
 import { translateItemTabs } from './scripts/item-tabs-translation';
+import { translateRollDialogTooltip } from './scripts/roll-dialog-tooltip-translation';
 
 export const PACKAGE = 'wrath-and-glory';
 export const REPO = 'moo-man/WrathAndGlory-FoundryVTT';
@@ -16,5 +17,6 @@ export function init() {
   translateEffects();
   translateShifts();
   translateItemTabs();
+  translateRollDialogTooltip();
   applyPatches(PACKAGE);
 }

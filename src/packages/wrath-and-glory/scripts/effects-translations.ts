@@ -90,4 +90,6 @@ export function translateEffects() {
   executeTranslation('systemEffects', SYSTEM_EFFECTS_TRANSLATIONS);
   executeTranslation('traitEffects', TRAIT_EFFECTS_TRANSLATIONS);
   executeTranslation('statusEffects', STATUS_EFFECTS_TRANSLATIONS);
+
+  (game as any).wng.config = foundry.utils.mergeObject(defaultWarhammerConfig, WNG);
 }
