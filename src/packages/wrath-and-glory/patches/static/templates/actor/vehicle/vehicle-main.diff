@@ -1,0 +1,13 @@
+Index: static/templates/actor/vehicle/vehicle-main.hbs
+===================================================================
+--- static/templates/actor/vehicle/vehicle-main.hbs	en
++++ static/templates/actor/vehicle/vehicle-main.hbs	pl
+@@ -149,7 +149,7 @@
+                 <div class="list-row">
+                     <div class="row-content">
+                         <div class="list-name">
+-                            No Weapons Equipped
++                            Nie ma wyposażonej broni
+                         </div>
+                     </div>
+                 </div>
