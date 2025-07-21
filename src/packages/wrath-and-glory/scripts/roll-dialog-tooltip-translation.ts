@@ -1,7 +1,8 @@
 /* eslint-disable max-classes-per-file */
 export function translateRollDialogTooltip() {
   const OriginalRollDialog = RollDialog;
-  class RollDialogPL extends OriginalRollDialog {
+  // @ts-expect-error - RollDialog is a class
+  RollDialog = class RollDialog extends OriginalRollDialog {
     public get tooltipConfig() {
       const config = super.tooltipConfig;
 
@@ -11,14 +12,13 @@ export function translateRollDialogTooltip() {
 
       return config;
     }
-  }
-  // @ts-expect-error - RollDialog is a class
-  RollDialog = RollDialogPL;
+  };
   // Set the prototype of all instances
   Object.setPrototypeOf(CommonDialog.prototype, RollDialog.prototype);
 
   const OriginalAttackDialog = AttackDialog;
-  class AttackDialogPL extends OriginalAttackDialog {
+  // @ts-expect-error - RollDialog is a class
+  AttackDialog = class AttackDialog extends OriginalAttackDialog {
     public get tooltipConfig() {
       const config = super.tooltipConfig;
 
@@ -34,9 +34,7 @@ export function translateRollDialogTooltip() {
 
       return config;
     }
-  }
-  // @ts-expect-error - RollDialog is a class
-  AttackDialog = AttackDialogPL;
+  };
   // Set the prototype of all instances
   Object.setPrototypeOf(PowerDialog.prototype, AttackDialog.prototype);
   Object.setPrototypeOf(WeaponDialog.prototype, AttackDialog.prototype);
