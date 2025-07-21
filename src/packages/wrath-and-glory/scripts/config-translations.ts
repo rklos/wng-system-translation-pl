@@ -38,5 +38,5 @@ export function translateConfig() {
   translateTestTypes();
   translateResolveTests();
 
-  (game as any).wng.config = mergeObject(defaultWarhammerConfig, WNG);
+  (game as any).wng.config = foundry.utils.mergeObject(defaultWarhammerConfig, WNG);
 }
