@@ -37,4 +37,6 @@ export function translateConfig() {
   translateVehicleTraits();
   translateTestTypes();
   translateResolveTests();
+
+  (game as any).wng.config = mergeObject(defaultWarhammerConfig, WNG);
 }

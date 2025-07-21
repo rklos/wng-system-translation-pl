@@ -13,6 +13,10 @@ interface ShiftedValue {
 }
 
 declare global {
+  function mergeObject(a: Record<string, unknown>, b: Record<string, unknown>): Record<string, unknown>;
+
+  const defaultWarhammerConfig: Record<string, unknown>;
+
   class SkillsModel {
     static defineSchema: () => Record<string, unknown>;
   }
