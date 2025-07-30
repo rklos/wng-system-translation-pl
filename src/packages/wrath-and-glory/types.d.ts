@@ -1,8 +1,15 @@
 /* eslint-disable max-classes-per-file,@typescript-eslint/explicit-member-accessibility */
+interface ScriptData {
+  trigger: string;
+  label: string;
+  script: string;
+  options?: Record<string, unknown>;
+}
+
 interface EffectSystem {
   system: {
     transferData: Record<string, string>;
-    scriptData?: CONFIG.StatusEffect[];
+    scriptData?: ScriptData[];
   };
 }
 
