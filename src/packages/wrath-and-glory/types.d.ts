@@ -2,7 +2,7 @@
 interface EffectSystem {
   system: {
     transferData: Record<string, string>;
-    scriptData?: ScriptData[];
+    scriptData?: CONFIG.StatusEffect[];
   };
 }
 
