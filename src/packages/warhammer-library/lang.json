@@ -92,8 +92,8 @@
     },
     "Item": {
       "Category": {
-        "Physical": "Physical",
-        "Vehicle": "Vehicle"
+        "Physical": "Fizyczne",
+        "Vehicle": "Pojazd"
       }
     },
     "ScriptLock": "Skrypt Zablokowany",
@@ -101,9 +101,9 @@
     "Script": "Skrypt",
     "ScriptTrigger": "Wyzwalacz",
     "Targeter": "Dotyczy zaznaczonego Celu",
-    "TargeterTT": "Uruchom ten skrypt w oknie dialogowym dowolnego Aktora, który zaznacza tego Aktora.",
-    "DefendingAgainst": "Broniący się przeciwko",
-    "DefendingAgainstTT": "Uruchom ten skrypt w oknie dialogowym Aktora, który został zaznaczony przez tego Aktora lub Przedmiotu",
+    "TargeterTT": "Run this script in the dialog of any Actor that is targeting this Actor.",
+    "DefendingAgainst": "Defending Against",
+    "DefendingAgainstTT": "Run this script in the dialog of an Actor that has been targeted with this Actor or Item",
     "DialogScript": "Skrypt Dialogowy",
     "HideScript": "Skrypt Ukrywający",
     "ActivateScript": "Skrypt Aktywujący",
@@ -230,62 +230,62 @@
     "Error": {
       "NotValidChoiceType": "Niewłaściwy wybór",
       "LibraryOutaded": "Biblioteka Warhammera jest nieaktualna. {system} definiuje minimalną wersję biblioteki wersji na {minimum}.",
-      "ID": "ID for {name} already exists in collection. This Document has been given a unique ID.",
+      "ID": "ID dla {name} istnieje już w kolekcji. Temu dokumentowi nadano unikatowy ID.",
       "CreateZoneEffect": "Efekty muszą być tworzone za pomocą aktywnego efektu z typem transferu \"Strefa\"",
-      "NoTargetedActors": "No targeted Actors!",
-      "NoActorAssigned": "No assigned Actor, you can assign Actors via Player Configuration at the bottom left of the screen.",
-      "NoTargets": "No targeted Actors!"
+      "NoTargetedActors": "Brak celów!",
+      "NoActorAssigned": "ak przypisanego aktora, możesz przypisywać aktorów za pomocą konfiguracji Gracza w lewym dolnym rogu ekranu",
+      "NoTargets": "Brak celów!"
     },
     "CompendiumBrowser": {
       "WorldItems": "Show World Items in Browser",
-      "FilterClear": "Clear Filters",
+      "FilterClear": "Wyczyść filtry",
       "Column": {
-        "Results": "Results",
-        "Source": "Source"
+        "Results": "Wyniki",
+        "Source": "Źródło"
       },
-      "Title": "Compendium Browser",
+      "Title": "Przeglądarka kompendium",
       "Action": {
-        "Open": "Open Compendium Browser"
+        "Open": "Otwórz przeglądarkę kompendium"
       },
       "Filters": {
-        "Label": "Filters",
-        "HasDarkvision": "Has Darkvision",
-        "HasSpellcasting": "Has Spellcasting",
-        "SearchResults": "Search results"
+        "Label": "Filtry",
+        "HasDarkvision": "Ma Widzenie w Ciemności",
+        "HasSpellcasting": "Ma zdolność rzucania zaklęć",
+        "SearchResults": "Wyniki wyszukiwania"
       },
       "Selection": {
-        "Label": "Selected: {summary}",
-        "Select": "Select",
+        "Label": "Wybrano: {summary}",
+        "Select": "Wybierz",
         "Summary": {
-          "Max": "<span class=\"value\">{value}</span> of up to {max}",
-          "Min": "<span class=\"value\">{value}</span> of at least {min}",
-          "Range": "<span class=\"value\">{value}</span> of {min} to {max}",
-          "Single": "<span class=\"value\">{value}</span> of {max}"
+          "Max": "<span class=\"value\">{value}</span> z maksymalnie {max}",
+          "Min": "<span class=\"value\">{value}</span> z co najmniej {min}",
+          "Range": "<span class=\"value\">{value}</span> od {min} do {max}",
+          "Single": "<span class=\"value\">{value}</span> z {max}"
         },
         "Warning": {
           "Document": {
-            "one": "document",
-            "other": "documents"
+            "one": "dokument",
+            "other": "dokumenty"
           },
-          "Max": "Must select at most {max} {document}, {value} selected.",
-          "Min": "Must select at least {min} {document}, {value} selected.",
-          "Range": "Must select between {min} and {max} documents, {value} selected.",
-          "Single": "Must select {max} {document}, {value} selected."
+          "Max": "Musisz wybrać maksymalnie {max} {document}, {value} wybrano.",
+          "Min": "Musisz wybrać co najmniej {min} {document}, {value} wybrano.",
+          "Range": "Musisz wybrać od {min} do {max} dokumentów, {value} wybrano.",
+          "Single": "Musisz wybrać {max} {document}, {value} wybrano."
         }
       },
       "Sources": {
-        "Name": "Compendium Browser Sources",
-        "Label": "Configure Sources",
-        "FilterPackages": "Filter Packages",
-        "Hint": "Configure which compendium packs have their content available in the compendium browser."
+        "Name": "Źródła przeglądarki kompendium",
+        "Label": "Skonfiguruj źródła",
+        "FilterPackages": "Filtruj pakiety",
+        "Hint": "Skonfiguruj, które pakiety kompendium mają swoje treści dostępne w przeglądarce kompendium."
       },
       "Tabs": {
-        "Feat.other": "Feats",
-        "Item.other": "Items",
-        "Monster.other": "Monsters"
+        "Feat.other": "Cechy",
+        "Item.other": "Przedmioty",
+        "Monster.other": "Potwory"
       },
       "Types": {
-        "Label": "Types"
+        "Label": "Typy"
       }
     },
     "Theme": {
