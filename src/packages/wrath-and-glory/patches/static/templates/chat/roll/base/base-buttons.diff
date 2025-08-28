@@ -2,7 +2,8 @@ Index: static/templates/chat/roll/base/base-buttons.hbs
 ===================================================================
 --- static/templates/chat/roll/base/base-buttons.hbs	en
 +++ static/templates/chat/roll/base/base-buttons.hbs	pl
-@@ -1,5 +1,5 @@
+@@ -1,6 +1,6 @@
+ 
  {{#if result.damage}}
 -<button type="button" data-action="rollDamage">Roll Damage</button>
 +<button type="button" data-action="rollDamage">Rzuć na Obrażenia</button>

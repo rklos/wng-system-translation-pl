@@ -23,7 +23,7 @@
         "type": "system",
         "compatibility": {
           "minimum": "7.0.0",
-          "verified": "7.1.1"
+          "verified": "7.2.1"
         }
       }
     ],

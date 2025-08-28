@@ -2,18 +2,32 @@ Index: static/templates/chat/roll/weapon/weapon-buttons.hbs
 ===================================================================
 --- static/templates/chat/roll/weapon/weapon-buttons.hbs	en
 +++ static/templates/chat/roll/weapon/weapon-buttons.hbs	pl
-@@ -1,11 +1,11 @@
- {{> systems/wrath-and-glory/templates/chat/roll/base/base-buttons.hbs}}
+@@ -2,23 +2,23 @@
+ 
+ {{#if result.blast}}
+         <div class="wrapper">
+-                <button type="button" data-action="blast" data-blast="{{result.blast}}"><i class="fa-solid fa-ruler-combined"></i> Blast</button>
++                <button type="button" data-action="blast" data-blast="{{result.blast}}"><i class="fa-solid fa-ruler-combined"></i> Wybuch</button>
+         </div>
+ {{/if}}
+ 
+ {{#if result.scatter}}
+         <div class="wrapper">
+-                <button type="button" data-action="scatter"><i class="fa-solid fa-arrows-up-down-left-right"></i> Scatter</button>
++                <button type="button" data-action="scatter"><i class="fa-solid fa-arrows-up-down-left-right"></i> Rozrzut</button>
+         </div>
+ {{/if}}
+ 
  {{#if result.isWrathComplication}}
- <div class="wrapper">
--        <button type="button" data-action="rollWrath">Roll Complication</button>
-+        <button type="button" data-action="rollWrath">Rzuć na Komplikację</button>
- </div>
+         <div class="wrapper">
+-                <button type="button" data-action="rollWrath">Roll Complication</button>
++                <button type="button" data-action="rollWrath">Rzuć na Komplikację</button>
+         </div>
  {{/if}}
  {{#if result.isWrathCritical}}
- <div class="wrapper">
--        <button type="button" data-action="rollWrath">Roll Critical Hit</button>
-+        <button type="button" data-action="rollWrath">Rzuć na Trafienie Krytyczne</button>
- </div>
+         <div class="wrapper">
+-                <button type="button" data-action="rollWrath">Roll Critical Hit</button>
++                <button type="button" data-action="rollWrath">Rzuć na Trafienie Krytyczne</button>
+         </div>
  {{/if}}
 \ No newline at end of file
