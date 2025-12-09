@@ -1,4 +1,4 @@
-import { log } from '~/utils/log';
+import { wngLog } from '~/utils/log';
 
 const SYSTEM_EFFECTS_TRANSLATIONS = {
   wounded: '+1 ST do wszystkich Testów',
@@ -81,7 +81,7 @@ function executeTranslation(type: 'systemEffects' | 'traitEffects' | 'statusEffe
         findEffect(key)!.system!.scriptData![index as unknown as number].label = value;
       });
     } catch (error) {
-      log(`Error translating ${type} ${key}: ${error}`);
+      wngLog(`Error translating ${type} ${key}: ${error}`);
     }
   });
 }

@@ -1,4 +1,4 @@
-import { log } from '~/utils/log';
+import { wngLog } from '~/utils/log';
 import type { StructuredPatch } from 'diff';
 import { applyPatch } from 'diff';
 
@@ -24,7 +24,7 @@ function patchTemplates(pkgName: string) {
     Object.values(diffs).forEach((diff) => {
       const patchedHtml = applyPatch(htmlString, diff, { fuzzFactor: 10 });
       if (!patchedHtml) {
-        log(`Failed to apply patch to ${originalPath}`);
+        wngLog(`Failed to apply patch to ${originalPath}`);
         return;
       }
       htmlString = patchedHtml;
@@ -33,7 +33,7 @@ function patchTemplates(pkgName: string) {
     const compiled = Handlebars.compile(htmlString);
     Handlebars.registerPartial(originalPath, compiled);
 
-    log(`Overridden template: ${originalPath}`);
+    wngLog(`Overridden template: ${originalPath}`);
   });
 }
 
